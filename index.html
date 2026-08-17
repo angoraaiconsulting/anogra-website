@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angora AI Consulting | Enterprise AI Enablement & Architecture</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              navy: '#0B2545',
+              navyHover: '#133560',
+              gold: '#BFA282',
+              goldDark: '#8F7150',
+              goldLight: '#E8DFD5',
+              goldMuted: 'rgba(191, 162, 130, 0.12)',
+              bg: '#FAFBFC',
+              section: '#F1F5F9',
+              card: '#FFFFFF',
+              border: '#E2E8F0',
+            }
+          },
+          boxShadow: {
+            'glow-sm': '0 0 20px -5px rgba(191, 162, 130, 0.2)',
+            'glow-lg': '0 20px 40px -15px rgba(11, 37, 69, 0.08)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-bg text-slate-700 font-sans antialiased selection:bg-brand-gold selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-navy text-white px-4 py-2.5 text-center text-xs font-semibold tracking-wide flex items-center justify-center gap-2 border-b border-brand-navy/30">
+    <span class="relative flex h-2 w-2">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+    </span>
+    <span><strong>Q3 Enablement Pilot:</strong> Accepting 2 partner teams for a zero-cost, 7-day custom AI implementation.</span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="border-b border-brand-border/80 sticky top-0 bg-white/95 backdrop-blur-md z-50">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between relative">
+      
+      <!-- Logo Integration -->
+      <a href="#" class="flex items-center h-full py-1.5 transition-transform hover:scale-105 duration-300 z-10">
+        <img src="Angora%20Logo_2.jpg" alt="Angora AI Consulting" class="h-full w-auto object-contain mix-blend-multiply">
+      </a>
+
+      <!-- Centered Tagline (Hidden on mobile to prevent overlap) -->
+      <div class="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-brand-goldDark text-[15px] font-extrabold uppercase tracking-[0.2em] whitespace-nowrap">
+        Making the exceptional accessible
+      </div>
+
+      <!-- CTA Button -->
+      <a href="#offer" class="text-xs font-bold uppercase tracking-wider bg-brand-navy hover:bg-brand-navyHover text-white px-5 py-2.5 rounded-lg transition-all shadow-md hover:shadow-lg z-10">
+        Claim Free Pilot
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section: The Outcome & Offer -->
+  <section class="relative max-w-5xl mx-auto px-6 pt-16 pb-20 text-center">
+    
+    <!-- Background Ambient Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[300px] bg-gradient-to-tr from-brand-goldMuted via-indigo-50/50 to-transparent blur-3xl -z-10 rounded-full"></div>
+
+    
+    <!-- Headline -->
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-brand-navy max-w-4xl mx-auto leading-[1.12]">
+      Reclaim <span class="text-brand-goldDark underline decoration-brand-gold/60 decoration-wavy decoration-2">10+ hours of capacity</span> per week using the tools you already own.
+    </h1>
+
+    <!-- Subheadline (Tagline removed as it's now in the header) -->
+    <p class="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+      At Angora, we engineer highly accurate AI automations directly inside your current workflow in <span class="text-brand-navy font-bold">under 7 days</span>.
+    </p>
+
+    <!-- CTAs & Risk Reversals -->
+    <div class="mt-10 flex flex-col items-center">
+      <a href="#offer" class="w-full sm:w-auto bg-brand-navy hover:bg-brand-navyHover text-white text-base sm:text-lg font-bold px-10 py-4 rounded-xl shadow-xl shadow-brand-navy/15 transition-all transform hover:-translate-y-0.5">
+        Claim 1 of 2 Free Enablement Pilots &rarr;
+      </a>
+
+      <div class="mt-5 flex flex-wrap justify-center items-center gap-6 text-xs text-slate-500 font-semibold">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          No New Software
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          Authoritative Review Protected
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          Zero Upfront Cost
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Angora AI Philosophy / Differentiation -->
+  <section class="border-y border-brand-border bg-brand-section py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-goldDark text-center mb-3">Our Core Philosophy</h2>
+      <p class="text-3xl font-extrabold text-center text-brand-navy mb-12">Why real AI efficiency is an execution problem, not a software problem</p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-2xl border border-brand-border bg-white shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-brand-goldDark font-mono text-sm font-bold mb-2">01. QUALITY OVER RAW SPEED</div>
+          <h3 class="text-lg font-bold text-brand-navy mb-2">Accuracy Is True Efficiency</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Producing flawed output 10x faster creates downstream chaos. We optimize every pipeline for verified precision before focusing on velocity.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-white shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-brand-goldDark font-mono text-sm font-bold mb-2">02. STRATEGIC RESTRAINT</div>
+          <h3 class="text-lg font-bold text-brand-navy mb-2">The "Could We vs. Should We" Test</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Just because a process can use AI doesn’t mean it should. We rigorously filter tasks to protect critical human oversight and core data integrity.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-white shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-brand-goldDark font-mono text-sm font-bold mb-2">03. SYSTEMS-LEVEL VISION</div>
+          <h3 class="text-lg font-bold text-brand-navy mb-2">Networked Impact Protection</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Automating an input must never degrade downstream workflows or obscure authoritative review. We engineer with the entire ecosystem in mind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 4-Step Angora Framework -->
+  <section id="framework" class="max-w-5xl mx-auto px-6 py-20">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-goldDark mb-3">The Implementation Roadmap</h2>
+      <p class="text-3xl font-extrabold text-brand-navy">How we build momentum by stacking quick wins</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 border border-brand-border bg-white rounded-2xl shadow-sm hover:border-brand-gold/60 transition-colors">
+        <span class="text-xs font-mono font-bold text-brand-goldDark bg-brand-goldMuted px-2 py-1 rounded">PHASE 01</span>
+        <h3 class="font-bold text-brand-navy text-base mt-3 mb-2">Diagnostic & Viability</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">We audit your manual workflows. If a task isn't ready for AI, we map an enablement plan rather than forcing brittle technology.</p>
+      </div>
+
+      <div class="p-6 border border-brand-border bg-white rounded-2xl shadow-sm hover:border-brand-gold/60 transition-colors">
+        <span class="text-xs font-mono font-bold text-brand-goldDark bg-brand-goldMuted px-2 py-1 rounded">PHASE 02</span>
+        <h3 class="font-bold text-brand-navy text-base mt-3 mb-2">Stacking Small Wins</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">We isolate one high-friction bottleneck first. Delivering measurable time savings immediately builds organizational confidence.</p>
+      </div>
+
+      <div class="p-6 border border-brand-border bg-white rounded-2xl shadow-sm hover:border-brand-gold/60 transition-colors">
+        <span class="text-xs font-mono font-bold text-brand-goldDark bg-brand-goldMuted px-2 py-1 rounded">PHASE 03</span>
+        <h3 class="font-bold text-brand-navy text-base mt-3 mb-2">Workflow Integration</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">We embed structured prompt chains directly inside your daily tools—with zero extra logins or new subscription costs.</p>
+      </div>
+
+      <div class="p-6 border border-brand-border bg-white rounded-2xl shadow-sm hover:border-brand-gold/60 transition-colors">
+        <span class="text-xs font-mono font-bold text-brand-goldDark bg-brand-goldMuted px-2 py-1 rounded">PHASE 04</span>
+        <h3 class="font-bold text-brand-navy text-base mt-3 mb-2">Enablement & Scale</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">Turnkey SOPs and clear walkthroughs ensure adoption is smooth on day one, giving leadership a repeatable template for future scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive ROI Calculator Component -->
+  <section class="max-w-4xl mx-auto px-6 pb-16">
+    <div class="p-8 sm:p-10 rounded-3xl border border-brand-border bg-white shadow-xl text-center relative overflow-hidden">
+      <!-- Decor -->
+      <div class="absolute -right-16 -top-16 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl"></div>
+      
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-goldDark mb-2">Capacity Calculator</h2>
+      <p class="text-2xl font-extrabold text-brand-navy mb-8">Calculate your team’s lost annual capacity</p>
+      
+      <div class="max-w-md mx-auto mb-8">
+        <label for="teamSize" class="block text-xs font-bold uppercase text-slate-500 mb-2">Team Members Handling Manual Tasks: <span id="teamSizeVal" class="text-brand-navy font-black text-base">5</span></label>
+        <input id="teamSize" type="range" min="1" max="25" value="5" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-navy" oninput="updateROI(this.value)">
+      </div>
+
+      <div class="grid grid-cols-2 gap-6 pt-6 border-t border-brand-border">
+        <div>
+          <div id="hoursSaved" class="text-3xl sm:text-4xl font-extrabold text-brand-navy">2,600 hrs</div>
+          <div class="text-xs text-slate-500 uppercase font-bold mt-1">Hours Reclaimed / Year</div>
+        </div>
+        <div>
+          <div id="dollarsSaved" class="text-3xl sm:text-4xl font-extrabold text-brand-goldDark">$130,000</div>
+          <div class="text-xs text-slate-500 uppercase font-bold mt-1">Capacity Value Unlocked</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grand Slam Offer Stack -->
+  <section id="offer" class="border-t border-brand-border bg-brand-section py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-goldDark text-center mb-3">The Free Pilot Deliverables</h2>
+      <p class="text-3xl font-extrabold text-center text-brand-navy mb-4">Everything included in your free enablement pilot</p>
+      <p class="text-sm text-slate-500 text-center max-w-xl mx-auto mb-12">We handle 100% of the workflow architecture. You only provide a 20-minute operational breakdown.</p>
+
+      <div class="border border-brand-border bg-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-brand-gold text-brand-navy font-black text-xs px-4 py-1.5 rounded-bl-xl uppercase tracking-wider shadow-sm">
+          100% Free For Partner Teams
+        </div>
+
+        <div class="space-y-6">
+          <div class="flex items-start gap-4 pb-6 border-b border-brand-border">
+            <div class="text-base font-mono font-bold text-brand-goldDark mt-0.5">01</div>
+            <div class="flex-1">
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-bold text-brand-navy text-base">"Could We / Should We" Diagnostic</h3>
+                <span class="text-xs font-mono font-semibold text-slate-400 line-through">$1,500 Value</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1">A 20-minute discovery session to isolate your highest-ROI automation lever while eliminating risky processes that shouldn't touch AI.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 pb-6 border-b border-brand-border">
+            <div class="text-base font-mono font-bold text-brand-goldDark mt-0.5">02</div>
+            <div class="flex-1">
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-bold text-brand-navy text-base">High-Accuracy Prompt & Logic Pipeline</h3>
+                <span class="text-xs font-mono font-semibold text-slate-400 line-through">$3,500 Value</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1">Custom-built prompt chains engineered for consistent output quality, zero data retention, and preserved human review.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 pb-6 border-b border-brand-border">
+            <div class="text-base font-mono font-bold text-brand-goldDark mt-0.5">03</div>
+            <div class="flex-1">
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-bold text-brand-navy text-base">Existing-Tool Integration Setup</h3>
+                <span class="text-xs font-mono font-semibold text-slate-400 line-through">$4,000 Value</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1">We embed the workflow directly into your current daily software so your team adopts it without buying new subscriptions.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="text-base font-mono font-bold text-brand-goldDark mt-0.5">04</div>
+            <div class="flex-1">
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-bold text-brand-navy text-base">Turnkey SOPs & Enablement Plan</h3>
+                <span class="text-xs font-mono font-semibold text-slate-400 line-through">$1,000 Value</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1">Clear operating procedures and video guides so leadership and staff operate the system with total confidence.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Value & Guarantee -->
+        <div class="mt-8 pt-6 border-t-2 border-slate-100 bg-brand-bg/50 p-6 rounded-2xl">
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+            <div>
+              <div class="text-xs text-slate-500 font-bold uppercase tracking-wider">Total Value: <span class="line-through">$10,000</span></div>
+              <div class="text-2xl font-black text-brand-navy">Your Investment: <span class="text-emerald-600">$0</span> <span class="text-xs font-normal text-slate-500">(In exchange for a case study)</span></div>
+            </div>
+            <a href="mailto:contact@angoraaiconsulting.com?subject=Claiming%20AI%20Pilot%20Spot&body=Hi%20Angora%20Team%2C%20I%20would%20like%20to%20claim%20one%20of%20the%20two%20zero-cost%20AI%20pilot%20spots%20for%20our%20team." class="w-full sm:w-auto bg-brand-navy hover:bg-brand-navyHover text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-md text-center">
+              Claim 1 of 2 Free Spots &rarr;
+            </a>
+          </div>
+
+          <div class="p-3 bg-white rounded-xl border border-brand-border text-center text-xs text-slate-600 font-medium shadow-sm">
+            <span class="font-bold text-brand-navy">The Performance Guarantee:</span> If this implementation doesn't measurably reclaim time without breaking downstream operations, you keep all SOPs and frameworks at zero cost.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof of Execution -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-goldDark text-center mb-3">Proof of Execution</h2>
+    <p class="text-3xl font-extrabold text-center text-brand-navy mb-12">Validated results from enterprise architectures</p>
+
+    <div class="p-8 rounded-2xl border border-brand-border bg-white shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800">VALIDATED IMPACT</span>
+          <span class="text-xs text-slate-400 font-medium">Enterprise Operations Pilot</span>
+        </div>
+        <h3 class="text-xl font-bold text-brand-navy mt-2">Document Categorization & Routing Pipeline</h3>
+        <p class="text-sm text-slate-600 mt-2">Replaced 12+ weekly hours of manual triage with structured prompt chaining pipelines across cross-functional operations while keeping leadership validation intact.</p>
+      </div>
+      <div class="text-left md:text-right border-t md:border-t-0 pt-4 md:pt-0 border-brand-border w-full md:w-auto">
+        <div class="text-3xl font-extrabold text-brand-goldDark">70%+</div>
+        <div class="text-xs text-slate-500 font-bold uppercase tracking-wide">Time Reclaimed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objection Buster FAQ -->
+  <section class="border-t border-brand-border bg-brand-section py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-goldDark text-center mb-3">Frequently Asked Questions</h2>
+      <p class="text-3xl font-extrabold text-brand-navy mb-12">Addressing the hard questions upfront</p>
+
+      <div class="space-y-4">
+        <div class="p-5 border border-brand-border rounded-xl bg-white">
+          <h4 class="font-bold text-brand-navy text-sm">Are you trying to sell us a new software platform?</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">No. We don't sell software. We are an enablement and architecture consultancy. We design and implement workflows using the tools and platforms your company already pays for.</p>
+        </div>
+
+        <div class="p-5 border border-brand-border rounded-xl bg-white">
+          <h4 class="font-bold text-brand-navy text-sm">What if our business feels too far behind on AI?</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Waiting is actually your biggest competitive advantage. You get to bypass the chaotic trial-and-error phase that cost early adopters thousands. We bring proven enterprise playbooks directly to your team.</p>
+        </div>
+
+        <div class="p-5 border border-brand-border rounded-xl bg-white">
+          <h4 class="font-bold text-brand-navy text-sm">What if our workflows aren't ready for AI?</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">We will tell you immediately during our diagnostic. We never force AI into brittle systems. Instead, we map a realistic enablement plan so your team builds the right foundation first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Close -->
+  <section class="max-w-3xl mx-auto px-6 py-24 text-center">
+    <div class="p-10 border border-brand-border rounded-3xl bg-white shadow-2xl relative overflow-hidden">
+      <!-- Glow -->
+      <div class="absolute left-1/2 -top-24 -translate-x-1/2 w-48 h-48 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <h2 class="text-3xl font-extrabold text-brand-navy mb-3">Turn AI into a measurable advantage this week.</h2>
+      <p class="text-slate-600 text-sm mb-8 max-w-lg mx-auto">Click below to claim one of the two available free pilot spots. Guaranteed response within 24 hours.</p>
+      
+      <a href="mailto:contact@angoraaiconsulting.com?subject=Claiming%20AI%20Pilot%20Spot&body=Hi%20Angora%20Team%2C%20I%20would%20like%20to%20claim%20one%20of%20the%20two%20zero-cost%20AI%20pilot%20spots%20for%20our%20team." class="inline-block w-full sm:w-auto bg-brand-navy hover:bg-brand-navyHover text-white font-bold text-lg px-10 py-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-0.5">
+        Claim 1 of 2 Free Pilot Spots &rarr;
+      </a>
+      
+      <div class="mt-6 flex justify-center gap-4 text-xs text-slate-500 font-bold uppercase tracking-wider">
+        <span>100% Free</span>
+        <span class="text-slate-300">•</span>
+        <span>$0 Commitments</span>
+        <span class="text-slate-300">•</span>
+        <span>No New Software</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border bg-white py-8 text-center text-xs text-slate-500">
+    &copy; 2026 Angora AI Consulting. All rights reserved.
+  </footer>
+
+  <!-- Calculator Script -->
+  <script>
+    function updateROI(val) {
+      document.getElementById('teamSizeVal').innerText = val;
+      const hours = val * 10 * 52;
+      const dollars = hours * 50;
+      
+      // Update with animation effect
+      const hoursEl = document.getElementById('hoursSaved');
+      const dollarsEl = document.getElementById('dollarsSaved');
+      
+      hoursEl.style.opacity = 0.5;
+      dollarsEl.style.opacity = 0.5;
+      
+      setTimeout(() => {
+        hoursEl.innerText = hours.toLocaleString() + ' hrs';
+        dollarsEl.innerText = '$' + dollars.toLocaleString();
+        hoursEl.style.opacity = 1;
+        dollarsEl.style.opacity = 1;
+      }, 50);
+    }
+  </script>
+
+</body>
+</html>
