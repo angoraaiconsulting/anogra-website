@@ -295,38 +295,14 @@ tailwind.config = {
 
 
 <!-- ============ CALCULATOR ============ -->
-<section id="results" class="bg-white py-20 md:py-28">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <p class="reveal font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.3em] mb-6">Capacity calculator</p>
-      <h2 class="reveal reveal-d1 text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight">What is manual work <span class="text-brand-goldDark">costing you?</span></h2>
-    </div>
-
-    <div class="reveal reveal-d2 bg-brand-bg border border-brand-border rounded-3xl p-8 md:p-12 shadow-[0_30px_60px_-30px_rgba(11,37,69,.2)]">
-      <div class="flex items-center justify-between mb-4">
-        <label for="teamSize" class="font-bold text-brand-navy text-lg">Team members handling manual tasks</label>
-        <span id="teamSizeLabel" class="font-mono font-bold text-2xl text-brand-goldDark bg-brand-goldLight/60 rounded-xl px-4 py-1.5">5</span>
-      </div>
-      <input id="teamSize" type="range" min="1" max="50" value="5" class="w-full" aria-label="Team members handling manual tasks">
-      <div class="flex justify-between text-xs font-mono text-slate-400 mt-2 mb-10"><span>1</span><span>50</span></div>
-
-      <div class="grid sm:grid-cols-2 gap-5">
-        <div class="bg-brand-navy rounded-2xl p-8 text-center">
-          <p id="hoursOut" class="font-mono font-bold text-4xl md:text-5xl text-brand-gold">2,600</p>
-          <p class="text-white/60 text-sm mt-2 font-medium uppercase tracking-[0.15em]">hours reclaimed / year</p>
-        </div>
-        <div class="bg-white border-2 border-brand-gold rounded-2xl p-8 text-center">
-          <p id="valueOut" class="font-mono font-bold text-4xl md:text-5xl text-brand-navy">$130,000</p>
-          <p class="text-slate-500 text-sm mt-2 font-medium uppercase tracking-[0.15em]">capacity value unlocked</p>
-        </div>
-      </div>
-      <p class="text-center text-slate-400 text-sm mt-6">Illustrative: 520 reclaimed hours per person per year, at a $50/hr loaded rate.</p>
-      <div class="text-center mt-8">
-        <a href="#offer" class="inline-flex justify-center items-center bg-brand-navy hover:bg-brand-navyHover text-white font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-brand-navy/20">
-          Apply for 1 of 3 Free Pilots
-        </a>
-      </div>
-    </div>
+<section id="results" class="bg-brand-navy text-white py-16 md:py-20">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-4">Results</p>
+    <h2 class="reveal text-3xl md:text-4xl font-extrabold tracking-tight mb-4">What is manual work costing you?</h2>
+    <p class="reveal text-white/70 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">Three numbers. Thirty seconds. No email required for the answer, and the math is shown so you can check it.</p>
+    <a href="calculator.html" class="reveal inline-flex justify-center items-center bg-brand-gold hover:bg-white text-brand-navy font-extrabold text-sm uppercase tracking-[0.12em] px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_40px_-10px_rgba(191,162,130,.6)]">
+      Run the Numbers
+    </a>
   </div>
 </section>
 
@@ -506,21 +482,6 @@ tailwind.config = {
     });
   });
 
-  // Capacity calculator
-  const slider = document.getElementById('teamSize');
-  const teamLabel = document.getElementById('teamSizeLabel');
-  const hoursOut = document.getElementById('hoursOut');
-  const valueOut = document.getElementById('valueOut');
-  function updateCalc() {
-    const n = parseInt(slider.value, 10);
-    const pct = ((n - 1) / 49) * 100;
-    slider.style.setProperty('--fill', pct + '%');
-    teamLabel.textContent = n;
-    hoursOut.textContent = (n * 520).toLocaleString('en-US');
-    valueOut.textContent = '$' + (n * 520 * 50).toLocaleString('en-US');
-  }
-  slider.addEventListener('input', updateCalc);
-  updateCalc();
 
   // Nav shadow on scroll
   const nav = document.getElementById('nav');
