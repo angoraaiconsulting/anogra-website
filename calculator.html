@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Many Hours Is Your Operation Losing? | Angora AI Consulting</title>
+<meta name="description" content="Three numbers, thirty seconds. See how many hours and dollars your ambulance operation loses to repetitive admin every year. The math is shown.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      colors: {
+        brand: {
+          navy: '#0B2545',
+          navyDeep: '#071A33',
+          navyHover: '#133560',
+          gold: '#BFA282',
+          goldDark: '#8F7150',
+          goldLight: '#E8DFD5',
+          bg: '#FAFBFC',
+          section: '#F1F5F9',
+          card: '#FFFFFF',
+          border: '#E2E8F0',
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { -webkit-font-smoothing: antialiased; }
+  body { text-rendering: optimizeLegibility; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+  @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px,-40px) scale(1.15); } }
+  @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,50px) scale(.9); } }
+  .blob1 { animation: drift1 14s ease-in-out infinite; }
+  .blob2 { animation: drift2 18s ease-in-out infinite; }
+  .grain::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
+  }
+  .gold-rule { background: linear-gradient(90deg, transparent, #BFA282, transparent); height: 1px; }
+  .nav-link { position: relative; }
+  .nav-link::after { content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:#BFA282; transition:width .3s ease; }
+  .nav-link:hover::after { width:100%; }
+  input[type="range"] { -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer; width: 100%; }
+  input[type="range"]::-webkit-slider-runnable-track { height: 6px; border-radius: 9999px; background: linear-gradient(90deg, #BFA282 var(--fill,50%), #E2E8F0 var(--fill,50%)); }
+  input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; margin-top: -7px; height: 20px; width: 20px; border-radius: 9999px; background: #0B2545; border: 3px solid #BFA282; box-shadow: 0 4px 12px rgba(11,37,69,.25); }
+  input[type="range"]::-moz-range-track { height: 6px; border-radius: 9999px; background: #E2E8F0; }
+  input[type="range"]::-moz-range-progress { height: 6px; border-radius: 9999px; background: #BFA282; }
+  input[type="range"]::-moz-range-thumb { height: 14px; width: 14px; border-radius: 9999px; background: #0B2545; border: 3px solid #BFA282; }
+  ::selection { background: #BFA282; color: #fff; }
+</style>
+</head>
+
+<body class="bg-brand-bg text-slate-700 font-sans">
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="bg-brand-navyDeep text-white px-4 py-2.5 text-center text-xs font-semibold tracking-wide flex items-center justify-center gap-2.5 border-b border-white/10">
+  <span class="relative flex h-2 w-2 shrink-0">
+    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+  </span>
+  <span class="font-mono uppercase tracking-[0.18em] text-[11px]"><span class="text-brand-gold font-bold">Q4 Founding Pilot:</span> 3 spots. Zero cost. First touchpoint within 7 days.</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-brand-border/70 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-6 h-[76px] flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-9 text-[13px] font-bold uppercase tracking-[0.14em] text-brand-navy/80">
+      <a href="index.html#philosophy" class="nav-link hover:text-brand-navy transition-colors">Philosophy</a>
+      <a href="index.html#process" class="nav-link hover:text-brand-navy transition-colors">Process</a>
+      <a href="index.html#results" class="nav-link hover:text-brand-navy transition-colors">Results</a>
+      <a href="index.html#faq" class="nav-link hover:text-brand-navy transition-colors">FAQ</a>
+      <a href="checklist.html" class="nav-link hover:text-brand-navy transition-colors">Checklist</a>
+    </nav>
+    <a href="index.html#offer" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-6 py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
+      Apply for a Pilot
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative bg-brand-navy text-white overflow-hidden grain">
+  <div class="blob1 absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-brand-gold/10 blur-3xl"></div>
+  <div class="blob2 absolute -bottom-40 -right-24 w-[560px] h-[560px] rounded-full bg-brand-navyHover/60 blur-3xl"></div>
+  <div class="relative max-w-4xl mx-auto px-6 py-20 md:py-24 text-center">
+    <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-6">Do the math</p>
+    <h1 class="reveal text-4xl md:text-6xl font-extrabold leading-tight mb-6">How many hours is<br>your operation losing?</h1>
+    <div class="reveal gold-rule w-24 mx-auto mb-8"></div>
+    <p class="reveal text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+      Three numbers. Thirty seconds. No email required for the answer, and the math is shown so you can check it.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section class="bg-white py-20 md:py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Inputs -->
+      <div class="reveal bg-brand-card border border-brand-border rounded-3xl p-8 md:p-10">
+        <h2 class="font-extrabold text-brand-navy text-xl mb-8">Your numbers</h2>
+
+        <div class="mb-8">
+          <div class="flex justify-between items-baseline mb-3">
+            <label class="text-sm font-bold text-brand-navy">Office and admin staff</label>
+            <span id="v-staff" class="font-mono font-bold text-brand-navy text-xl">4</span>
+          </div>
+          <input id="in-staff" type="range" min="1" max="30" value="4" step="1">
+          <p class="text-xs text-slate-400 mt-2">Everyone who touches schedules, billing, reports, or crew paperwork.</p>
+        </div>
+
+        <div class="mb-8">
+          <div class="flex justify-between items-baseline mb-3">
+            <label class="text-sm font-bold text-brand-navy">Repetitive hours per person, per week</label>
+            <span class="font-mono font-bold text-brand-navy text-xl"><span id="v-hrs">6</span>h</span>
+          </div>
+          <input id="in-hrs" type="range" min="1" max="20" value="6" step="1">
+          <p class="text-xs text-slate-400 mt-2">Copy-paste work, chasing statuses, reformatting reports. Be honest.</p>
+        </div>
+
+        <div class="mb-2">
+          <div class="flex justify-between items-baseline mb-3">
+            <label class="text-sm font-bold text-brand-navy">Loaded cost per hour</label>
+            <span class="font-mono font-bold text-brand-navy text-xl">$<span id="v-cost">32</span></span>
+          </div>
+          <input id="in-cost" type="range" min="15" max="60" value="32" step="1">
+          <p class="text-xs text-slate-400 mt-2">Wage plus benefits and overhead. $30 to $35 is typical for admin roles.</p>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="reveal bg-brand-navy text-white rounded-3xl p-8 md:p-10 grain relative overflow-hidden flex flex-col justify-center">
+        <h2 class="font-extrabold text-xl mb-8">What it costs you</h2>
+        <div class="space-y-7">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold mb-1">Hours lost per year</p>
+            <p class="font-mono font-bold text-5xl"><span id="r-hours">1,248</span></p>
+          </div>
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold mb-1">Dollars per year</p>
+            <p class="font-mono font-bold text-5xl">$<span id="r-dollars">39,936</span></p>
+          </div>
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold mb-1">That is</p>
+            <p class="text-xl font-bold"><span id="r-fte">0.6</span> of a full-time hire <span class="text-white/50 font-medium">doing nothing but repetitive admin.</span></p>
+          </div>
+        </div>
+        <div class="gold-rule my-8"></div>
+        <p class="font-mono text-xs text-white/40 leading-relaxed" id="r-math">4 staff × 6 hrs/wk × 52 wks = 1,248 hrs/yr<br>1,248 hrs × $32/hr = $39,936/yr</p>
+      </div>
+    </div>
+
+    <p class="reveal text-center text-slate-500 text-sm mt-10 max-w-2xl mx-auto leading-relaxed">
+      Conservative on purpose. It counts only repetitive admin, not the errors, the rework, or the turnover it causes. The real number is higher.
+    </p>
+  </div>
+</section>
+
+<!-- ============ NEXT STEP ============ -->
+<section class="bg-brand-section py-20 md:py-24 border-y border-brand-border">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">That is the size of it.<br>Here is where it hides.</h2>
+    <p class="reveal text-slate-600 leading-relaxed mb-8 max-w-xl mx-auto">The calculator tells you how much. The Curse of the Curve checklist tells you where. Seven questions, two minutes, and you will know exactly which workflows to fix first.</p>
+    <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="checklist.html" class="inline-flex justify-center items-center bg-brand-navy hover:bg-brand-navyHover text-white font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-brand-navy/20">
+        Take the assessment
+      </a>
+      <a href="margin-map.html" class="inline-flex justify-center items-center border-2 border-brand-navy/15 hover:border-brand-gold text-brand-navy font-bold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300">
+        See the Margin Map
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-brand-navyDeep text-white/50 py-12">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6">
+    <div class="flex items-center gap-6 text-xs font-semibold uppercase tracking-[0.14em]">
+      <a href="margin-map.html" class="hover:text-brand-gold transition-colors">AI Margin Map</a>
+      <a href="calculator.html" class="hover:text-brand-gold transition-colors">ROI Calculator</a>
+      <a href="about.html" class="hover:text-brand-gold transition-colors">About</a>
+      <a href="checklist.html" class="hover:text-brand-gold transition-colors">Checklist</a>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 w-full">
+      <div class="flex items-center gap-4">
+        <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-10 w-auto object-contain rounded-lg bg-white px-2 py-1">
+        <div>
+          <p class="text-white font-bold text-sm">Angora AI Consulting</p>
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold/80">Making the exceptional accessible</p>
+        </div>
+      </div>
+      <a href="mailto:matthew@angoraaiconsulting.com" class="text-sm hover:text-brand-gold transition-colors font-medium">matthew@angoraaiconsulting.com</a>
+      <p class="text-xs">© <span id="year">2026</span> Angora AI Consulting. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const staff = document.getElementById('in-staff');
+const hrs = document.getElementById('in-hrs');
+const cost = document.getElementById('in-cost');
+
+function fill(el) {
+  const pct = (el.value - el.min) / (el.max - el.min) * 100;
+  el.style.setProperty('--fill', pct + '%');
+}
+function fmt(n) { return n.toLocaleString('en-US'); }
+
+function calc() {
+  const s = +staff.value, h = +hrs.value, c = +cost.value;
+  const hours = s * h * 52;
+  const dollars = hours * c;
+  const fte = hours / 2080;
+  document.getElementById('v-staff').textContent = s;
+  document.getElementById('v-hrs').textContent = h;
+  document.getElementById('v-cost').textContent = c;
+  document.getElementById('r-hours').textContent = fmt(hours);
+  document.getElementById('r-dollars').textContent = fmt(dollars);
+  document.getElementById('r-fte').textContent = fte.toFixed(1);
+  document.getElementById('r-math').innerHTML =
+    s + ' staff × ' + h + ' hrs/wk × 52 wks = ' + fmt(hours) + ' hrs/yr<br>' +
+    fmt(hours) + ' hrs × $' + c + '/hr = $' + fmt(dollars) + '/yr';
+  [staff, hrs, cost].forEach(fill);
+}
+[staff, hrs, cost].forEach(el => el.addEventListener('input', calc));
+calc();
+</script>
+</body>
+</html>

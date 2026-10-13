@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Margin Map | Angora AI Consulting</title>
+<meta name="description" content="The AI Margin Map: a one-page map of exactly where AI returns hours in your ambulance operation, the order to build in, and what to never automate.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      colors: {
+        brand: {
+          navy: '#0B2545',
+          navyDeep: '#071A33',
+          navyHover: '#133560',
+          gold: '#BFA282',
+          goldDark: '#8F7150',
+          goldLight: '#E8DFD5',
+          bg: '#FAFBFC',
+          section: '#F1F5F9',
+          card: '#FFFFFF',
+          border: '#E2E8F0',
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { -webkit-font-smoothing: antialiased; }
+  body { text-rendering: optimizeLegibility; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+  @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px,-40px) scale(1.15); } }
+  @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,50px) scale(.9); } }
+  .blob1 { animation: drift1 14s ease-in-out infinite; }
+  .blob2 { animation: drift2 18s ease-in-out infinite; }
+  .grain::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
+  }
+  .gold-rule { background: linear-gradient(90deg, transparent, #BFA282, transparent); height: 1px; }
+  .nav-link { position: relative; }
+  .nav-link::after { content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:#BFA282; transition:width .3s ease; }
+  .nav-link:hover::after { width:100%; }
+  ::selection { background: #BFA282; color: #fff; }
+</style>
+</head>
+
+<body class="bg-brand-bg text-slate-700 font-sans">
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="bg-brand-navyDeep text-white px-4 py-2.5 text-center text-xs font-semibold tracking-wide flex items-center justify-center gap-2.5 border-b border-white/10">
+  <span class="relative flex h-2 w-2 shrink-0">
+    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+  </span>
+  <span class="font-mono uppercase tracking-[0.18em] text-[11px]"><span class="text-brand-gold font-bold">Q4 Founding Pilot:</span> 3 spots. Zero cost. First touchpoint within 7 days.</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-brand-border/70 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-6 h-[76px] flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-9 text-[13px] font-bold uppercase tracking-[0.14em] text-brand-navy/80">
+      <a href="index.html#philosophy" class="nav-link hover:text-brand-navy transition-colors">Philosophy</a>
+      <a href="index.html#process" class="nav-link hover:text-brand-navy transition-colors">Process</a>
+      <a href="index.html#results" class="nav-link hover:text-brand-navy transition-colors">Results</a>
+      <a href="index.html#faq" class="nav-link hover:text-brand-navy transition-colors">FAQ</a>
+      <a href="checklist.html" class="nav-link hover:text-brand-navy transition-colors">Checklist</a>
+    </nav>
+    <a href="index.html#offer" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-6 py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
+      Apply for a Pilot
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative bg-brand-navy text-white overflow-hidden grain">
+  <div class="blob1 absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-brand-gold/10 blur-3xl"></div>
+  <div class="blob2 absolute -bottom-40 -right-24 w-[560px] h-[560px] rounded-full bg-brand-navyHover/60 blur-3xl"></div>
+  <div class="relative max-w-4xl mx-auto px-6 py-20 md:py-28 text-center">
+    <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-6">The deliverable</p>
+    <h1 class="reveal text-4xl md:text-6xl font-extrabold leading-tight mb-6">A one-page map of exactly<br>where AI pays in your operation.</h1>
+    <div class="reveal gold-rule w-24 mx-auto mb-8"></div>
+    <p class="reveal text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+      The AI Margin Map scores every repetitive workflow on hours returned and confidence it will work. Inside the tools you already own. You get the map, the order to build in, and the list of what to never automate.
+    </p>
+  </div>
+</section>
+
+<!-- ============ WHAT IT CONTAINS ============ -->
+<section class="bg-white py-20 md:py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">Four parts. One page. No fluff.</p>
+      <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy">What the map contains</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">01</p>
+        <h3 class="font-extrabold text-brand-navy text-lg mb-2">The inventory</h3>
+        <p class="text-slate-600 leading-relaxed text-[15px]">Every repetitive workflow we found in your operation, written in plain language. If it eats hours every week, it is on the list.</p>
+      </div>
+      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">02</p>
+        <h3 class="font-extrabold text-brand-navy text-lg mb-2">The scores</h3>
+        <p class="text-slate-600 leading-relaxed text-[15px]">Each workflow rated on hours it can return and likelihood it actually works. We show the math. No guesses, no hype.</p>
+      </div>
+      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">03</p>
+        <h3 class="font-extrabold text-brand-navy text-lg mb-2">The build order</h3>
+        <p class="text-slate-600 leading-relaxed text-[15px]">Which workflow to automate first, second, third. Highest return and lowest risk goes first. You always know what is next.</p>
+      </div>
+      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">04</p>
+        <h3 class="font-extrabold text-brand-navy text-lg mb-2">The do-not-automate list</h3>
+        <p class="text-slate-600 leading-relaxed text-[15px]">What AI must never touch in your operation. Written down, agreed on, final. The boundary is what makes the rest safe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAMPLE MAP ============ -->
+<section class="bg-brand-section py-20 md:py-24 border-y border-brand-border">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">See it before you buy it</p>
+      <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">What a finished map looks like</h2>
+      <p class="reveal text-slate-500 text-sm">Sample entries from a composite operation. Your map is built from your workflows.</p>
+    </div>
+    <div class="reveal bg-white rounded-3xl border border-brand-border shadow-xl shadow-brand-navy/5 overflow-hidden">
+      <div class="bg-brand-navy text-white px-8 py-5 flex items-center justify-between">
+        <p class="font-bold">AI Margin Map <span class="font-mono text-xs text-brand-gold/80 font-medium ml-2 uppercase tracking-widest">Sample</span></p>
+        <p class="font-mono text-xs text-white/50">Composite ambulance operation</p>
+      </div>
+      <div class="divide-y divide-brand-border">
+        <div class="px-8 py-6 flex flex-col md:flex-row md:items-center gap-4">
+          <div class="flex-1">
+            <p class="font-bold text-brand-navy">Claim-status checks <span class="ml-2 font-mono text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1">#1 BUILD FIRST</span></p>
+            <p class="text-sm text-slate-500 mt-1">Denied and pending claims checked against payer portals, drafts queued for human review.</p>
+          </div>
+          <div class="flex gap-8 font-mono text-sm">
+            <div><p class="text-slate-400 text-xs uppercase tracking-widest">Hours/yr</p><p class="font-bold text-brand-navy text-lg">310</p></div>
+            <div><p class="text-slate-400 text-xs uppercase tracking-widest">Confidence</p><p class="font-bold text-brand-navy text-lg">High</p></div>
+          </div>
+        </div>
+        <div class="px-8 py-6 flex flex-col md:flex-row md:items-center gap-4">
+          <div class="flex-1">
+            <p class="font-bold text-brand-navy">Shift-schedule first draft <span class="ml-2 font-mono text-xs font-bold text-brand-goldDark bg-brand-goldLight/50 border border-brand-gold/40 rounded-full px-3 py-1">#2</span></p>
+            <p class="text-sm text-slate-500 mt-1">Draft schedule from availability and cert requirements. Supervisor approves before posting.</p>
+          </div>
+          <div class="flex gap-8 font-mono text-sm">
+            <div><p class="text-slate-400 text-xs uppercase tracking-widest">Hours/yr</p><p class="font-bold text-brand-navy text-lg">210</p></div>
+            <div><p class="text-slate-400 text-xs uppercase tracking-widest">Confidence</p><p class="font-bold text-brand-navy text-lg">High</p></div>
+          </div>
+        </div>
+        <div class="px-8 py-6 flex flex-col md:flex-row md:items-center gap-4">
+          <div class="flex-1">
+            <p class="font-bold text-brand-navy">Monthly board report <span class="ml-2 font-mono text-xs font-bold text-brand-goldDark bg-brand-goldLight/50 border border-brand-gold/40 rounded-full px-3 py-1">#3</span></p>
+            <p class="text-sm text-slate-500 mt-1">Volume, response times, and financials pulled and formatted. Director reviews before distribution.</p>
+          </div>
+          <div class="flex gap-8 font-mono text-sm">
+            <div><p class="text-slate-400 text-xs uppercase tracking-widest">Hours/yr</p><p class="font-bold text-brand-navy text-lg">150</p></div>
+            <div><p class="text-slate-400 text-xs uppercase tracking-widest">Confidence</p><p class="font-bold text-brand-navy text-lg">Med</p></div>
+          </div>
+        </div>
+        <div class="px-8 py-6 bg-red-50/60 flex flex-col md:flex-row md:items-center gap-4">
+          <div class="flex-1">
+            <p class="font-bold text-brand-navy">Crew clinical decisions <span class="ml-2 font-mono text-xs font-bold text-red-700 bg-red-100 border border-red-200 rounded-full px-3 py-1">NEVER AUTOMATE</span></p>
+            <p class="text-sm text-slate-500 mt-1">Patient care judgment stays with licensed clinicians. Not scored, not discussed, not on the table.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT IS BUILT ============ -->
+<section class="bg-white py-20 md:py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">Three steps</p>
+      <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy">How your map gets built</h2>
+    </div>
+    <div class="space-y-4">
+      <div class="reveal flex gap-6 bg-brand-card border border-brand-border rounded-2xl p-7">
+        <p class="font-mono font-bold text-3xl text-brand-goldDark shrink-0">1</p>
+        <div>
+          <h3 class="font-extrabold text-brand-navy text-lg mb-1">The 30-minute call</h3>
+          <p class="text-slate-600 leading-relaxed text-[15px]">You walk me through the operation. Where the hours go, what already exists, what hurts. If I cannot find real hours to save, I tell you in the first 15 minutes and we end early.</p>
+        </div>
+      </div>
+      <div class="reveal flex gap-6 bg-brand-card border border-brand-border rounded-2xl p-7">
+        <p class="font-mono font-bold text-3xl text-brand-goldDark shrink-0">2</p>
+        <div>
+          <h3 class="font-extrabold text-brand-navy text-lg mb-1">The build</h3>
+          <p class="text-slate-600 leading-relaxed text-[15px]">I inventory every repetitive workflow, score each one on hours and confidence, set the build order, and write the do-not-automate list. Done within 7 days of the call.</p>
+        </div>
+      </div>
+      <div class="reveal flex gap-6 bg-brand-card border border-brand-border rounded-2xl p-7">
+        <p class="font-mono font-bold text-3xl text-brand-goldDark shrink-0">3</p>
+        <div>
+          <h3 class="font-extrabold text-brand-navy text-lg mb-1">The walkthrough</h3>
+          <p class="text-slate-600 leading-relaxed text-[15px]">We go through the map together, line by line. You keep the map either way. If we work together after that, we build in the order the map says.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO IT IS NOT FOR ============ -->
+<section class="bg-brand-navy text-white py-20 md:py-24 grain relative overflow-hidden">
+  <div class="relative max-w-3xl mx-auto px-6 text-center">
+    <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-4">Straight talk</p>
+    <h2 class="reveal text-3xl md:text-4xl font-extrabold mb-8">Who the map is not for</h2>
+    <div class="reveal text-left space-y-4 text-white/75 leading-relaxed">
+      <p><span class="text-white font-bold">If you want new software,</span> that is not me. The map is built for the tools you already own.</p>
+      <p><span class="text-white font-bold">If you want AI making unsupervised decisions,</span> I will not build that. Every workflow on the map has a human check before anything counts.</p>
+      <p><span class="text-white font-bold">If you want a 40-page strategy deck,</span> that is not this. You get one page you can act on.</p>
+    </div>
+    <div class="reveal gold-rule w-24 mx-auto my-10"></div>
+    <p class="reveal text-white/75 leading-relaxed mb-8">If you run an ambulance company and want to know exactly where your hours are going, the map is for you.</p>
+    <a href="index.html#offer" class="reveal inline-flex justify-center items-center bg-brand-gold hover:bg-white text-brand-navy font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_40px_-10px_rgba(191,162,130,.6)]">
+      Apply for 1 of 3 Free Pilots
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-brand-navyDeep text-white/50 py-12">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6">
+    <div class="flex items-center gap-6 text-xs font-semibold uppercase tracking-[0.14em]">
+      <a href="margin-map.html" class="hover:text-brand-gold transition-colors">AI Margin Map</a>
+      <a href="calculator.html" class="hover:text-brand-gold transition-colors">ROI Calculator</a>
+      <a href="about.html" class="hover:text-brand-gold transition-colors">About</a>
+      <a href="checklist.html" class="hover:text-brand-gold transition-colors">Checklist</a>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 w-full">
+      <div class="flex items-center gap-4">
+        <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-10 w-auto object-contain rounded-lg bg-white px-2 py-1">
+        <div>
+          <p class="text-white font-bold text-sm">Angora AI Consulting</p>
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold/80">Making the exceptional accessible</p>
+        </div>
+      </div>
+      <a href="mailto:matthew@angoraaiconsulting.com" class="text-sm hover:text-brand-gold transition-colors font-medium">matthew@angoraaiconsulting.com</a>
+      <p class="text-xs">© <span id="year">2026</span> Angora AI Consulting. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
