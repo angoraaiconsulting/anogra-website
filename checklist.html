@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Curse of the Curve Checklist | Angora AI Consulting</title>
+<meta name="description" content="Seven ways AI quietly eats hours instead of saving them. Check how many sound familiar, get your score, and get the fixes. Free from Angora AI Consulting.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      colors: {
+        brand: {
+          navy: '#0B2545',
+          navyDeep: '#071A33',
+          navyHover: '#133560',
+          gold: '#BFA282',
+          goldDark: '#8F7150',
+          goldLight: '#E8DFD5',
+          bg: '#FAFBFC',
+          section: '#F1F5F9',
+          card: '#FFFFFF',
+          border: '#E2E8F0',
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { -webkit-font-smoothing: antialiased; }
+  body { text-rendering: optimizeLegibility; }
+
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px,-40px) scale(1.15); } }
+  @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,50px) scale(.9); } }
+  .blob1 { animation: drift1 14s ease-in-out infinite; }
+  .blob2 { animation: drift2 18s ease-in-out infinite; }
+
+  .grain::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
+  }
+
+  .gold-rule { background: linear-gradient(90deg, transparent, #BFA282, transparent); height: 1px; }
+
+  .nav-link { position: relative; }
+  .nav-link::after { content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:#BFA282; transition:width .3s ease; }
+  .nav-link:hover::after { width:100%; }
+
+  /* Checklist cards */
+  .check-card { transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease; cursor: pointer; }
+  .check-card:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(11,37,69,.10); }
+  .check-card.checked { border-color: #BFA282; box-shadow: 0 12px 32px rgba(191,162,130,.25); }
+  .check-box { transition: all .2s ease; }
+  .check-card.checked .check-box { background: #0B2545; border-color: #0B2545; }
+  .check-card.checked .check-box svg { opacity: 1; transform: scale(1); }
+  .check-box svg { opacity: 0; transform: scale(.5); transition: all .2s ease; }
+
+  ::selection { background: #BFA282; color: #fff; }
+</style>
+</head>
+
+<body class="bg-brand-bg text-slate-700 font-sans">
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="bg-brand-navyDeep text-white px-4 py-2.5 text-center text-xs font-semibold tracking-wide flex items-center justify-center gap-2.5 border-b border-white/10">
+  <span class="relative flex h-2 w-2 shrink-0">
+    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+  </span>
+  <span class="font-mono uppercase tracking-[0.18em] text-[11px]"><span class="text-brand-gold font-bold">Q4 Founding Pilot:</span> 3 spots. Zero cost. First touchpoint within 7 days.</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-brand-border/70 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-6 h-[76px] flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-12 w-auto object-contain">
+    </a>
+    <nav class="hidden md:flex items-center gap-9 text-[13px] font-bold uppercase tracking-[0.14em] text-brand-navy/80">
+      <a href="index.html#philosophy" class="nav-link hover:text-brand-navy transition-colors">Philosophy</a>
+      <a href="index.html#process" class="nav-link hover:text-brand-navy transition-colors">Process</a>
+      <a href="index.html#results" class="nav-link hover:text-brand-navy transition-colors">Results</a>
+      <a href="index.html#faq" class="nav-link hover:text-brand-navy transition-colors">FAQ</a>
+      <a href="checklist.html" class="nav-link text-brand-navy transition-colors" style="color:#0B2545;">Checklist</a>
+    </nav>
+    <a href="index.html#offer" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-6 py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
+      Claim Free Pilot
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative bg-brand-navy text-white overflow-hidden grain">
+  <div class="blob1 absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-brand-gold/10 blur-3xl"></div>
+  <div class="blob2 absolute -bottom-40 -right-24 w-[560px] h-[560px] rounded-full bg-brand-navyHover/60 blur-3xl"></div>
+  <div class="relative max-w-4xl mx-auto px-6 py-20 md:py-28 text-center">
+    <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-6">Free self-assessment for ambulance operators</p>
+    <h1 class="reveal text-4xl md:text-6xl font-extrabold leading-tight mb-6">The Curse<br>of the Curve</h1>
+    <div class="reveal gold-rule w-24 mx-auto mb-8"></div>
+    <p class="reveal text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+      Everyone has felt this. AI is magic for a single task and a mess for a real workflow.
+    </p>
+    <p class="reveal text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mt-4">
+      One great answer, then it falls apart the next day. One person figures it out, then they go on vacation. The tool saves an hour on Tuesday and creates two hours of cleanup on Wednesday.
+    </p>
+    <p class="reveal text-white font-semibold max-w-2xl mx-auto leading-relaxed mt-6">
+      That gap has a name. This checklist tells you which side of it you are on.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHECKLIST ============ -->
+<section class="bg-white py-20 md:py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">Check each one that sounds familiar</p>
+      <div class="inline-flex items-center gap-3 bg-brand-section border border-brand-border rounded-full px-6 py-3">
+        <span id="score-count" class="font-mono font-bold text-2xl text-brand-navy">0</span>
+        <span class="text-sm text-slate-500 font-medium">of 7 checked</span>
+      </div>
+    </div>
+
+    <div id="checklist" class="space-y-4">
+
+      <div class="check-card reveal bg-brand-card border-2 border-brand-border rounded-2xl p-6 md:p-7" data-item="repeatability">
+        <div class="flex items-start gap-5">
+          <div class="check-box shrink-0 w-7 h-7 mt-1 rounded-lg border-2 border-brand-border bg-white flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-brand-navy text-lg mb-1"><span class="font-mono text-brand-goldDark text-sm mr-2">01</span>Repeatability</h3>
+            <p class="font-semibold text-slate-800 mb-2">Your best AI result could not be reproduced next week.</p>
+            <p class="text-slate-600 text-[15px] leading-relaxed mb-3">Someone got a great output once. Nobody saved the prompt, nobody wrote the steps, and the magic never happened again.</p>
+            <p class="text-[14px] leading-relaxed text-brand-navy bg-brand-section rounded-xl px-4 py-3"><span class="font-bold">Fix:</span> Save what worked. A result you cannot reproduce is luck, not a system.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="check-card reveal bg-brand-card border-2 border-brand-border rounded-2xl p-6 md:p-7" data-item="capture">
+        <div class="flex items-start gap-5">
+          <div class="check-box shrink-0 w-7 h-7 mt-1 rounded-lg border-2 border-brand-border bg-white flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-brand-navy text-lg mb-1"><span class="font-mono text-brand-goldDark text-sm mr-2">02</span>Capture</h3>
+            <p class="font-semibold text-slate-800 mb-2">If the person who built it left, the workflow dies with them.</p>
+            <p class="text-slate-600 text-[15px] leading-relaxed mb-3">The good prompts live in one person's head. When they are out sick or move on, the team starts from zero.</p>
+            <p class="text-[14px] leading-relaxed text-brand-navy bg-brand-section rounded-xl px-4 py-3"><span class="font-bold">Fix:</span> Write it down where the team can find it. If it is not written, it does not exist.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="check-card reveal bg-brand-card border-2 border-brand-border rounded-2xl p-6 md:p-7" data-item="verification">
+        <div class="flex items-start gap-5">
+          <div class="check-box shrink-0 w-7 h-7 mt-1 rounded-lg border-2 border-brand-border bg-white flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-brand-navy text-lg mb-1"><span class="font-mono text-brand-goldDark text-sm mr-2">03</span>Verification</h3>
+            <p class="font-semibold text-slate-800 mb-2">AI output reaches real decisions without a human checking it.</p>
+            <p class="text-slate-600 text-[15px] leading-relaxed mb-3">Schedules, billing, crew assignments. The output looks right, so it goes out. Nobody confirmed it.</p>
+            <p class="text-[14px] leading-relaxed text-brand-navy bg-brand-section rounded-xl px-4 py-3"><span class="font-bold">Fix:</span> Decide who reviews the output and when, before it counts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="check-card reveal bg-brand-card border-2 border-brand-border rounded-2xl p-6 md:p-7" data-item="sharing">
+        <div class="flex items-start gap-5">
+          <div class="check-box shrink-0 w-7 h-7 mt-1 rounded-lg border-2 border-brand-border bg-white flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-brand-navy text-lg mb-1"><span class="font-mono text-brand-goldDark text-sm mr-2">04</span>Sharing</h3>
+            <p class="font-semibold text-slate-800 mb-2">Every department reinvents what another already solved.</p>
+            <p class="text-slate-600 text-[15px] leading-relaxed mb-3">Dispatch prompts one way, billing another, HR a third. Nobody knows what is working two desks over.</p>
+            <p class="text-[14px] leading-relaxed text-brand-navy bg-brand-section rounded-xl px-4 py-3"><span class="font-bold">Fix:</span> Collect the three best prompts in the company and make them everyone's starting point.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="check-card reveal bg-brand-card border-2 border-brand-border rounded-2xl p-6 md:p-7" data-item="ownership">
+        <div class="flex items-start gap-5">
+          <div class="check-box shrink-0 w-7 h-7 mt-1 rounded-lg border-2 border-brand-border bg-white flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-brand-navy text-lg mb-1"><span class="font-mono text-brand-goldDark text-sm mr-2">05</span>Ownership</h3>
+            <p class="font-semibold text-slate-800 mb-2">When a workflow breaks, fixing it is nobody's job.</p>
+            <p class="text-slate-600 text-[15px] leading-relaxed mb-3">It worked in March. Something changed in June. Nobody noticed until the errors piled up.</p>
+            <p class="text-[14px] leading-relaxed text-brand-navy bg-brand-section rounded-xl px-4 py-3"><span class="font-bold">Fix:</span> Name an owner. Someone's job is to notice and fix it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="check-card reveal bg-brand-card border-2 border-brand-border rounded-2xl p-6 md:p-7" data-item="boundaries">
+        <div class="flex items-start gap-5">
+          <div class="check-box shrink-0 w-7 h-7 mt-1 rounded-lg border-2 border-brand-border bg-white flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-brand-navy text-lg mb-1"><span class="font-mono text-brand-goldDark text-sm mr-2">06</span>Boundaries</h3>
+            <p class="font-semibold text-slate-800 mb-2">You have not written down what AI must never touch.</p>
+            <p class="text-slate-600 text-[15px] leading-relaxed mb-3">So the team either avoids AI entirely or uses it where they should not. Both are expensive.</p>
+            <p class="text-[14px] leading-relaxed text-brand-navy bg-brand-section rounded-xl px-4 py-3"><span class="font-bold">Fix:</span> Write the do-not-automate list first. Dispatch decisions, the patient care record, clinical judgment. The boundary is what makes the rest safe.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="check-card reveal bg-brand-card border-2 border-brand-border rounded-2xl p-6 md:p-7" data-item="tool-discipline">
+        <div class="flex items-start gap-5">
+          <div class="check-box shrink-0 w-7 h-7 mt-1 rounded-lg border-2 border-brand-border bg-white flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-brand-navy text-lg mb-1"><span class="font-mono text-brand-goldDark text-sm mr-2">07</span>Tool discipline</h3>
+            <p class="font-semibold text-slate-800 mb-2">You are paying for AI tools with no workflow assigned to them.</p>
+            <p class="text-slate-600 text-[15px] leading-relaxed mb-3">Licenses renew every month. Nobody can point to the workflow each tool runs.</p>
+            <p class="text-[14px] leading-relaxed text-brand-navy bg-brand-section rounded-xl px-4 py-3"><span class="font-bold">Fix:</span> Match every tool to one real workflow, or cancel it. The tool is the last decision, not the first.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============ SCORE ============ -->
+    <div id="score-panel" class="mt-12 bg-brand-navy text-white rounded-3xl p-8 md:p-12 text-center grain relative overflow-hidden">
+      <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-4">Your score</p>
+      <p class="text-6xl font-extrabold mb-4"><span id="score-big">0</span><span class="text-white/40 text-3xl"> / 7</span></p>
+      <h3 id="score-title" class="text-2xl font-bold mb-3">Start checking above.</h3>
+      <p id="score-desc" class="text-white/70 max-w-xl mx-auto leading-relaxed">Tap each item that sounds familiar. Your result appears here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMAIL CAPTURE ============ -->
+<section class="bg-brand-section py-20 md:py-24 border-y border-brand-border">
+  <div class="max-w-2xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">Get the full breakdown</h2>
+    <p class="text-slate-600 leading-relaxed mb-8">Drop your email and I'll send the complete checklist with every fix, plus the one question that tells you where to start. No spam, no sequence. Just the thing.</p>
+    <div class="bg-white rounded-3xl border border-brand-border shadow-xl shadow-brand-navy/5 overflow-hidden">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRNeiancU59mPR4Q66F4-0hYJ2rmOh0CgGtxwWtLqvnMulWA/viewform?embedded=true" width="100%" height="720" frameborder="0" marginheight="0" marginwidth="0" title="Get the Curse of the Curve checklist">Loading…</iframe>
+    </div>
+    <p class="text-xs text-slate-400 mt-4">Your score is <span id="form-score">0</span>/7. Mention it on the form so I can point you at the right fix first.</p>
+  </div>
+</section>
+
+<!-- ============ THE FIX ============ -->
+<section class="bg-white py-20 md:py-24">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <div class="gold-rule w-24 mx-auto mb-10"></div>
+    <p class="text-xl md:text-2xl text-slate-700 leading-relaxed mb-6">The fix is never a better tool. It is turning one-off wins into workflows that run the same way every time, with a check before anything counts.</p>
+    <p class="text-slate-600 leading-relaxed mb-10">Want help crossing it? I run free 30-minute AI Opportunity Reviews for ambulance operators. I'll map 2 to 3 safe places AI could save your team real hours, and tell you the one thing you should not automate.</p>
+    <a href="index.html#offer" class="inline-flex justify-center items-center bg-brand-navy hover:bg-brand-navyHover text-white font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-brand-navy/20">
+      Claim your free review
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-brand-navyDeep text-white/50 py-12">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-4">
+      <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-10 w-auto object-contain rounded-lg bg-white px-2 py-1">
+      <div>
+        <p class="text-white font-bold text-sm">Angora AI Consulting</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold/80">Making the exceptional accessible</p>
+      </div>
+    </div>
+    <a href="mailto:matthew@angoraaiconsulting.com" class="text-sm hover:text-brand-gold transition-colors font-medium">matthew@angoraaiconsulting.com</a>
+    <p class="text-xs">© <span id="year">2026</span> Angora AI Consulting. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Reveal on scroll ---------- */
+const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- Checklist scoring ---------- */
+const bands = [
+  { max: 2, title: "Ahead of most.", desc: "You are ahead of most companies. The curve has not caught you yet. Keep the checks in place and review them twice a year." },
+  { max: 4, title: "The curve is eating your week.", desc: "Real hours are leaking. Pick the two items you checked and fix those first. Small, in order, verified." },
+  { max: 7, title: "Paying for AI and doing the work anyway.", desc: "You are spending twice: once on the tools, once on the manual work. This is exactly what the AI Margin Map is built to unwind." }
+];
+const cards = document.querySelectorAll('.check-card');
+const scoreCount = document.getElementById('score-count');
+const scoreBig = document.getElementById('score-big');
+const scoreTitle = document.getElementById('score-title');
+const scoreDesc = document.getElementById('score-desc');
+const formScore = document.getElementById('form-score');
+let started = false;
+
+function updateScore() {
+  const n = document.querySelectorAll('.check-card.checked').length;
+  scoreCount.textContent = n;
+  scoreBig.textContent = n;
+  formScore.textContent = n;
+  if (!started && n > 0) started = true;
+  if (started) {
+    const band = bands.find(b => n <= b.max);
+    scoreTitle.textContent = band.title;
+    scoreDesc.textContent = band.desc;
+  }
+}
+cards.forEach(card => {
+  card.addEventListener('click', () => { card.classList.toggle('checked'); updateScore(); });
+});
+
+</script>
+</body>
+</html>
