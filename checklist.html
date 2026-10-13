@@ -114,14 +114,70 @@ tailwind.config = {
     <h1 class="reveal text-4xl md:text-6xl font-extrabold leading-tight mb-6">The Curse<br>of the Curve</h1>
     <div class="reveal gold-rule w-24 mx-auto mb-8"></div>
     <p class="reveal text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-      Everyone has felt this. AI is magic for a single task and a mess for a real workflow.
+      A good answer from AI takes five minutes. A result your operation can rely on takes a discipline most teams will never build on their own.
     </p>
     <p class="reveal text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mt-4">
       One great answer, then it falls apart the next day. One person figures it out, then they go on vacation. The tool saves an hour on Tuesday and creates two hours of cleanup on Wednesday.
     </p>
     <p class="reveal text-white font-semibold max-w-2xl mx-auto leading-relaxed mt-6">
-      That gap has a name. This checklist tells you which side of it you are on.
+      That gap is the curse. This checklist shows you where your team is on it.
     </p>
+  </div>
+</section>
+
+<!-- ============ THE CURVE ============ -->
+<section class="bg-white py-20 md:py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">Why it happens</p>
+      <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">The learning curve has two phases.<br>Most teams only finish the first.</h2>
+    </div>
+
+    <div class="reveal bg-brand-card border border-brand-border rounded-3xl p-6 md:p-10 mb-10">
+      <svg viewBox="0 0 800 420" class="w-full h-auto" role="img" aria-label="The AI learning curve: rapid early progress, then a long flatline where enablement dies, then the climb to durable results.">
+        <defs>
+          <linearGradient id="curveFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#BFA282" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#BFA282" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <line x1="60" y1="20" x2="60" y2="360" stroke="#E2E8F0" stroke-width="1"/>
+        <line x1="60" y1="360" x2="770" y2="360" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="62" y="382" font-family="JetBrains Mono, monospace" font-size="12" fill="#94A3B8">LEARNING INVESTED &#8594;</text>
+        <text x="14" y="60" font-family="JetBrains Mono, monospace" font-size="12" fill="#94A3B8" transform="rotate(-90 14 60)" text-anchor="middle">&#8592; DURABLE VALUE</text>
+        <path d="M 60,360 L 60,320 C 100,300 130,220 180,185 C 260,175 400,178 480,172 C 560,165 660,120 740,62 L 740,360 Z" fill="url(#curveFill)"/>
+        <path d="M 60,320 C 100,300 130,220 180,185 C 260,175 400,178 480,172 C 560,165 660,120 740,62" fill="none" stroke="#0B2545" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="180" cy="185" r="7" fill="#BFA282" stroke="#0B2545" stroke-width="3"/>
+        <circle cx="480" cy="172" r="7" fill="#BFA282" stroke="#0B2545" stroke-width="3"/>
+        <text x="120" y="120" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="700" fill="#0B2545">The magic</text>
+        <text x="120" y="142" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#64748B">5 minutes to a good answer.</text>
+        <text x="120" y="160" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#64748B">Anyone can do it.</text>
+        <rect x="270" y="200" width="220" height="64" rx="8" fill="#FEF2F2" stroke="#FECACA"/>
+        <text x="380" y="226" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="800" fill="#991B1B" text-anchor="middle">THE FLATLINE</text>
+        <text x="380" y="248" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#991B1B" text-anchor="middle">Where AI enablement dies.</text>
+        <text x="560" y="60" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="700" fill="#0B2545">Durable results</text>
+        <text x="560" y="82" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#64748B">Workflows that run the same</text>
+        <text x="560" y="100" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#64748B">way every time, verified.</text>
+      </svg>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">PHASE 1</p>
+        <h3 class="font-extrabold text-brand-navy text-lg mb-2">The magic</h3>
+        <p class="text-slate-600 leading-relaxed text-[15px]">Anyone can get a good answer in five minutes. Leadership sees it and assumes the hard part is done. It is not. It has not started.</p>
+      </div>
+      <div class="reveal bg-red-50/50 border border-red-200 rounded-2xl p-8">
+        <p class="font-mono text-red-700 text-sm font-bold mb-3">THE CURSE</p>
+        <h3 class="font-extrabold text-brand-navy text-lg mb-2">The flatline</h3>
+        <p class="text-slate-600 leading-relaxed text-[15px]">Durable results take prompt systems, verification gates, documentation, ownership, and iteration. That is weeks of deliberate learning on top of an already full job. Most employees will not invest it. Not from laziness, from economics. This is where AI enablement flatlines.</p>
+      </div>
+      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">PHASE 2</p>
+        <h3 class="font-extrabold text-brand-navy text-lg mb-2">The discipline</h3>
+        <p class="text-slate-600 leading-relaxed text-[15px]">Workflows that run the same way every time, with a check before anything counts. Someone has to climb the second curve. That someone is us.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -129,7 +185,7 @@ tailwind.config = {
 <section class="bg-white py-20 md:py-24">
   <div class="max-w-4xl mx-auto px-6">
     <div class="text-center mb-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">Check each one that sounds familiar</p>
+      <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">The seven places the curve gets steep. Check each one that sounds familiar.</p>
       <div class="inline-flex items-center gap-3 bg-brand-section border border-brand-border rounded-full px-6 py-3">
         <span id="score-count" class="font-mono font-bold text-2xl text-brand-navy">0</span>
         <span class="text-sm text-slate-500 font-medium">of 7 checked</span>
@@ -265,6 +321,7 @@ tailwind.config = {
   <div class="max-w-3xl mx-auto px-6 text-center">
     <div class="gold-rule w-24 mx-auto mb-10"></div>
     <p class="text-xl md:text-2xl text-slate-700 leading-relaxed mb-6">The fix is never a better tool. It is turning one-off wins into workflows that run the same way every time, with a check before anything counts.</p>
+    <p class="text-lg text-slate-600 leading-relaxed mb-10">Your team does not have to climb the second curve. That is the job you hire out.</p>
     <p class="text-slate-600 leading-relaxed mb-10">Want help crossing it? I run free 30-minute AI Opportunity Reviews for ambulance operators. I'll map 2 to 3 safe places AI could save your team real hours, and tell you the one thing you should not automate.</p>
     <a href="index.html#offer" class="inline-flex justify-center items-center bg-brand-navy hover:bg-brand-navyHover text-white font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-brand-navy/20">
       Request your free review
