@@ -99,11 +99,28 @@ tailwind.config = {
             <a href="index.html#faq" class="nav-link hover:text-brand-navy transition-colors">FAQ</a>
       <a href="checklist.html" class="nav-link text-brand-navy transition-colors" style="color:#0B2545;">Checklist</a>
     </nav>
-    <a href="index.html#offer" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-6 py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
+    <a href="index.html#offer" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
       Apply for a Pilot
     </a>
+    <button id="menuBtn" class="lg:hidden ml-2 p-2 text-brand-navy" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg id="menuIconOpen" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg id="menuIconClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </div>
-</header>
+
+  <div id="mobileMenu" class="lg:hidden hidden border-t border-brand-border/70 bg-white/95 backdrop-blur-xl">
+    <nav class="px-6 py-2 flex flex-col" aria-label="Mobile">
+      <a href="index.html#philosophy" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Philosophy</a>
+      <a href="index.html#process" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Process</a>
+      <a href="index.html#results" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Results</a>
+      <a href="margin-map.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Margin Map</a>
+      <a href="calculator.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Calculator</a>
+      <a href="about.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">About</a>
+      <a href="index.html#faq" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">FAQ</a>
+      <a href="checklist.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Checklist</a>
+      <a href="index.html#offer" class="mt-4 mb-4 text-center bg-brand-navy text-white font-extrabold text-sm uppercase tracking-[0.12em] px-6 py-3.5 rounded-full">Apply for a Pilot</a>
+    </nav>
+  </div></header>
 
 <!-- ============ HERO ============ -->
 <section class="relative bg-brand-navy text-white overflow-hidden grain">
@@ -140,21 +157,21 @@ tailwind.config = {
         </defs>
         <line x1="60" y1="20" x2="60" y2="360" stroke="#E2E8F0" stroke-width="1"/>
         <line x1="60" y1="360" x2="770" y2="360" stroke="#E2E8F0" stroke-width="1"/>
-        <text x="62" y="382" font-family="JetBrains Mono, monospace" font-size="12" fill="#94A3B8">LEARNING INVESTED &#8594;</text>
-        <text x="14" y="60" font-family="JetBrains Mono, monospace" font-size="12" fill="#94A3B8" transform="rotate(-90 14 60)" text-anchor="middle">&#8592; DURABLE VALUE</text>
+        <text x="62" y="382" font-family="JetBrains Mono, monospace" font-size="14" fill="#94A3B8">LEARNING INVESTED &#8594;</text>
+        <text x="14" y="60" font-family="JetBrains Mono, monospace" font-size="14" fill="#94A3B8" transform="rotate(-90 14 60)" text-anchor="middle">&#8592; DURABLE VALUE</text>
         <path d="M 60,360 L 60,320 C 100,300 130,220 180,185 C 260,175 400,178 480,172 C 560,165 660,120 740,62 L 740,360 Z" fill="url(#curveFill)"/>
         <path d="M 60,320 C 100,300 130,220 180,185 C 260,175 400,178 480,172 C 560,165 660,120 740,62" fill="none" stroke="#0B2545" stroke-width="4" stroke-linecap="round"/>
         <circle cx="180" cy="185" r="7" fill="#BFA282" stroke="#0B2545" stroke-width="3"/>
         <circle cx="480" cy="172" r="7" fill="#BFA282" stroke="#0B2545" stroke-width="3"/>
-        <text x="120" y="120" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="700" fill="#0B2545">The magic</text>
-        <text x="120" y="142" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#64748B">5 minutes to a good answer.</text>
-        <text x="120" y="160" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#64748B">Anyone can do it.</text>
+        <text x="120" y="120" font-family="Plus Jakarta Sans, sans-serif" font-size="18" font-weight="700" fill="#0B2545">The magic</text>
+        <text x="120" y="142" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#64748B">5 minutes to a good answer.</text>
+        <text x="120" y="160" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#64748B">Anyone can do it.</text>
         <rect x="270" y="200" width="220" height="64" rx="8" fill="#FEF2F2" stroke="#FECACA"/>
-        <text x="380" y="226" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="800" fill="#991B1B" text-anchor="middle">THE FLATLINE</text>
-        <text x="380" y="248" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#991B1B" text-anchor="middle">Where AI enablement dies.</text>
-        <text x="560" y="60" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="700" fill="#0B2545">Durable results</text>
-        <text x="560" y="82" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#64748B">Workflows that run the same</text>
-        <text x="560" y="100" font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#64748B">way every time, verified.</text>
+        <text x="380" y="226" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#991B1B" text-anchor="middle">THE FLATLINE</text>
+        <text x="380" y="248" font-family="Plus Jakarta Sans, sans-serif" font-size="14" fill="#991B1B" text-anchor="middle">Where AI enablement dies.</text>
+        <text x="560" y="60" font-family="Plus Jakarta Sans, sans-serif" font-size="18" font-weight="700" fill="#0B2545">Durable results</text>
+        <text x="560" y="82" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#64748B">Workflows that run the same</text>
+        <text x="560" y="100" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#64748B">way every time, verified.</text>
       </svg>
     </div>
 
@@ -305,7 +322,7 @@ tailwind.config = {
 <section class="bg-brand-section py-20 md:py-24 border-y border-brand-border">
   <div class="max-w-2xl mx-auto px-6 text-center">
     <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">Get the full breakdown</h2>
-    <p class="text-slate-600 leading-relaxed mb-8">Drop your email and I'll send the complete checklist with every fix, plus the one question that tells you where to start. No spam, no sequence. Just the thing.</p>
+    <p class="text-slate-600 leading-relaxed mb-8">Drop your email and I'll send the complete checklist with every fix, plus the one question that tells you where to start. No spam, no sequence. Just the checklist.</p>
     <div class="bg-white rounded-3xl border border-brand-border shadow-xl shadow-brand-navy/5 overflow-hidden">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRNeiancU59mPR4Q66F4-0hYJ2rmOh0CgGtxwWtLqvnMulWA/viewform?embedded=true" width="100%" height="720" frameborder="0" marginheight="0" marginwidth="0" title="Get the Curse of the Curve checklist">Loading…</iframe>
     </div>
@@ -385,6 +402,24 @@ cards.forEach(card => {
   card.addEventListener('click', () => { card.classList.toggle('checked'); updateScore(); });
 });
 
+</script>
+<script>
+  (function () {
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+    var iconOpen = document.getElementById('menuIconOpen');
+    var iconClose = document.getElementById('menuIconClose');
+    function setOpen(open) {
+      menu.classList.toggle('hidden', !open);
+      iconOpen.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+      btn.setAttribute('aria-expanded', String(open));
+    }
+    btn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  })();
 </script>
 </body>
 </html>

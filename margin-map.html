@@ -84,11 +84,28 @@ tailwind.config = {
             <a href="index.html#faq" class="nav-link hover:text-brand-navy transition-colors">FAQ</a>
       <a href="checklist.html" class="nav-link hover:text-brand-navy transition-colors">Checklist</a>
     </nav>
-    <a href="index.html#offer" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-6 py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
+    <a href="index.html#offer" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
       Apply for a Pilot
     </a>
+    <button id="menuBtn" class="lg:hidden ml-2 p-2 text-brand-navy" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg id="menuIconOpen" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg id="menuIconClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </div>
-</header>
+
+  <div id="mobileMenu" class="lg:hidden hidden border-t border-brand-border/70 bg-white/95 backdrop-blur-xl">
+    <nav class="px-6 py-2 flex flex-col" aria-label="Mobile">
+      <a href="index.html#philosophy" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Philosophy</a>
+      <a href="index.html#process" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Process</a>
+      <a href="index.html#results" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Results</a>
+      <a href="margin-map.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Margin Map</a>
+      <a href="calculator.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Calculator</a>
+      <a href="about.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">About</a>
+      <a href="index.html#faq" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">FAQ</a>
+      <a href="checklist.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Checklist</a>
+      <a href="index.html#offer" class="mt-4 mb-4 text-center bg-brand-navy text-white font-extrabold text-sm uppercase tracking-[0.12em] px-6 py-3.5 rounded-full">Apply for a Pilot</a>
+    </nav>
+  </div></header>
 
 <!-- ============ HERO ============ -->
 <section class="relative bg-brand-navy text-white overflow-hidden grain">
@@ -210,7 +227,7 @@ tailwind.config = {
         <p class="font-mono font-bold text-3xl text-brand-goldDark shrink-0">2</p>
         <div>
           <h3 class="font-extrabold text-brand-navy text-lg mb-1">The build</h3>
-          <p class="text-slate-600 leading-relaxed text-[15px]">I inventory every repetitive workflow, score each one on hours and confidence, set the build order, and write the do-not-automate list. Done within 7 days of the call.</p>
+          <p class="text-slate-600 leading-relaxed text-[15px]">I inventory every repetitive workflow, score each one on hours and confidence, set the build order, and write the do-not-automate list. First draft in days, not months.</p>
         </div>
       </div>
       <div class="reveal flex gap-6 bg-brand-card border border-brand-border rounded-2xl p-7">
@@ -269,6 +286,24 @@ tailwind.config = {
 const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script>
+  (function () {
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+    var iconOpen = document.getElementById('menuIconOpen');
+    var iconClose = document.getElementById('menuIconClose');
+    function setOpen(open) {
+      menu.classList.toggle('hidden', !open);
+      iconOpen.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+      btn.setAttribute('aria-expanded', String(open));
+    }
+    btn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  })();
 </script>
 </body>
 </html>

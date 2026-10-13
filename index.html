@@ -111,11 +111,28 @@ tailwind.config = {
             <a href="#faq" class="nav-link hover:text-brand-navy transition-colors">FAQ</a>
       <a href="checklist.html" class="nav-link hover:text-brand-navy transition-colors">Checklist</a>
     </nav>
-    <a href="#offer" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-6 py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
+    <a href="#offer" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
       Apply for a Pilot
     </a>
+    <button id="menuBtn" class="lg:hidden ml-2 p-2 text-brand-navy" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg id="menuIconOpen" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg id="menuIconClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </div>
-</header>
+
+  <div id="mobileMenu" class="lg:hidden hidden border-t border-brand-border/70 bg-white/95 backdrop-blur-xl">
+    <nav class="px-6 py-2 flex flex-col" aria-label="Mobile">
+      <a href="#philosophy" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Philosophy</a>
+      <a href="#process" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Process</a>
+      <a href="#results" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Results</a>
+      <a href="margin-map.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Margin Map</a>
+      <a href="calculator.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Calculator</a>
+      <a href="about.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">About</a>
+      <a href="#faq" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">FAQ</a>
+      <a href="checklist.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Checklist</a>
+      <a href="#offer" class="mt-4 mb-4 text-center bg-brand-navy text-white font-extrabold text-sm uppercase tracking-[0.12em] px-6 py-3.5 rounded-full">Apply for a Pilot</a>
+    </nav>
+  </div></header>
 
 <!-- ============ HERO ============ -->
 <section id="top" class="relative bg-brand-navy text-white overflow-hidden grain">
@@ -248,7 +265,7 @@ tailwind.config = {
     <div class="text-center max-w-3xl mx-auto mb-16">
       <p class="reveal font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.3em] mb-6">The implementation roadmap</p>
       <h2 class="reveal reveal-d1 text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight">Momentum, stacked <span class="text-brand-goldDark">fast.</span></h2>
-      <p class="reveal reveal-d2 mt-5 text-lg text-slate-600">We build momentum by stacking quick wins. Here is exactly how your week unfolds.</p>
+      <p class="reveal reveal-d2 mt-5 text-lg text-slate-600">We build momentum by stacking quick wins. Here is how the engagement unfolds.</p>
     </div>
 
     <div class="grid md:grid-cols-4 gap-5">
@@ -515,5 +532,23 @@ tailwind.config = {
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+<script>
+  (function () {
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+    var iconOpen = document.getElementById('menuIconOpen');
+    var iconClose = document.getElementById('menuIconClose');
+    function setOpen(open) {
+      menu.classList.toggle('hidden', !open);
+      iconOpen.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+      btn.setAttribute('aria-expanded', String(open));
+    }
+    btn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  })();
+</script>
 </body>
 </html>
