@@ -12,48 +12,48 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-      },
-      colors: {
-        brand: {
-          navy: '#0B2545',
-          navyDeep: '#071A33',
-          navyHover: '#133560',
-          gold: '#BFA282',
-          goldDark: '#8F7150',
-          goldLight: '#E8DFD5',
-          bg: '#FAFBFC',
-          section: '#F1F5F9',
-          card: '#FFFFFF',
-          border: '#E2E8F0',
-        }
-      }
-    }
-  }
+ theme: {
+ extend: {
+ fontFamily: {
+ sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+ mono: ['"JetBrains Mono"', 'monospace'],
+ },
+ colors: {
+ brand: {
+ navy: '#0B2545',
+ navyDeep: '#071A33',
+ navyHover: '#133560',
+ gold: '#BFA282',
+ goldDark: '#8F7150',
+ goldLight: '#E8DFD5',
+ bg: '#FAFBFC',
+ section: '#F1F5F9',
+ card: '#FFFFFF',
+ border: '#E2E8F0',
+ }
+ }
+ }
+ }
 }
 </script>
 <style>
-  html { -webkit-font-smoothing: antialiased; }
-  body { text-rendering: optimizeLegibility; }
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
-  .reveal.visible { opacity: 1; transform: none; }
-  @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px,-40px) scale(1.15); } }
-  @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,50px) scale(.9); } }
-  .blob1 { animation: drift1 14s ease-in-out infinite; }
-  .blob2 { animation: drift2 18s ease-in-out infinite; }
-  .grain::after {
-    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
-  }
-  .gold-rule { background: linear-gradient(90deg, transparent, #BFA282, transparent); height: 1px; }
-  .nav-link { position: relative; }
-  .nav-link::after { content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:#BFA282; transition:width .3s ease; }
-  .nav-link:hover::after { width:100%; }
-  ::selection { background: #BFA282; color: #fff; }
+ html { -webkit-font-smoothing: antialiased; }
+ body { text-rendering: optimizeLegibility; }
+ .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+ .reveal.visible { opacity: 1; transform: none; }
+ @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px,-40px) scale(1.15); } }
+ @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,50px) scale(.9); } }
+ .blob1 { animation: drift1 14s ease-in-out infinite; }
+ .blob2 { animation: drift2 18s ease-in-out infinite; }
+ .grain::after {
+ content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay;
+ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
+ }
+ .gold-rule { background: linear-gradient(90deg, transparent, #BFA282, transparent); height: 1px; }
+ .nav-link { position: relative; }
+ .nav-link::after { content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:#BFA282; transition:width .3s ease; }
+ .nav-link:hover::after { width:100%; }
+ ::selection { background: #BFA282; color: #fff; }
 </style>
 </head>
 
@@ -61,160 +61,160 @@ tailwind.config = {
 
 <!-- ============ ANNOUNCEMENT BAR ============ -->
 <div class="bg-brand-navyDeep text-white px-4 py-2.5 text-center text-xs font-semibold tracking-wide flex items-center justify-center gap-2.5 border-b border-white/10">
-  <span class="relative flex h-2 w-2 shrink-0">
-    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-  </span>
-  <a href="webinar.html" class="font-mono uppercase tracking-[0.18em] text-[11px] hover:text-brand-gold transition-colors"><span class="text-brand-gold font-bold">Free training:</span> Where AI Actually Pays in an Ambulance Company. 30 minutes. Zero cost. <span class="underline">Save your seat</span></a>
+ <span class="relative flex h-2 w-2 shrink-0">
+ <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+ <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+ </span>
+ <a href="webinar.html" class="font-mono uppercase tracking-[0.18em] text-[11px] hover:text-brand-gold transition-colors"><span class="text-brand-gold font-bold">Free training:</span> Where AI Actually Pays in an Ambulance Company. 30 minutes. Zero cost. <span class="underline">Save your seat</span></a>
 </div>
 
 <!-- ============ NAV ============ -->
 <header id="nav" class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-brand-border/70 transition-shadow duration-300">
-  <div class="max-w-7xl mx-auto px-6 h-[76px] flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-12 w-auto object-contain">
-    </a>
-    <nav class="hidden lg:flex items-center gap-7 text-[12px] font-bold uppercase tracking-[0.14em] text-brand-navy/80">
-      <a href="index.html#philosophy" class="nav-link hover:text-brand-navy transition-colors">Philosophy</a>
-      <a href="index.html#process" class="nav-link hover:text-brand-navy transition-colors">Process</a>
+ <div class="max-w-7xl mx-auto px-6 h-[76px] flex items-center justify-between">
+ <a href="index.html" class="flex items-center gap-3">
+ <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-12 w-auto object-contain">
+ </a>
+ <nav class="hidden lg:flex items-center gap-7 text-[12px] font-bold uppercase tracking-[0.14em] text-brand-navy/80">
+ <a href="index.html#philosophy" class="nav-link hover:text-brand-navy transition-colors">Philosophy</a>
+ <a href="index.html#process" class="nav-link hover:text-brand-navy transition-colors">Process</a>
 <a href="margin-map.html" class="nav-link hover:text-brand-navy transition-colors">Margin Map</a>
-      <a href="calculator.html" class="nav-link hover:text-brand-navy transition-colors">Calculator</a>
-      <a href="about.html" class="nav-link hover:text-brand-navy transition-colors">About</a>
-      <a href="webinar.html" class="nav-link hover:text-brand-goldDark transition-colors">Upcoming Training</a>
-            <a href="index.html#faq" class="nav-link hover:text-brand-navy transition-colors">FAQ</a>
-      <a href="checklist.html" class="nav-link hover:text-brand-navy transition-colors">Checklist</a>
-      <a href="book.html" class="nav-link hover:text-brand-navy transition-colors">Book a Review</a>
-    </nav>
-    <a href="webinar.html#register" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
-      Join the Free Training
-    </a>
-    <button id="menuBtn" class="lg:hidden ml-2 p-2 text-brand-navy" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
-      <svg id="menuIconOpen" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
-      <svg id="menuIconClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
-  </div>
+ <a href="calculator.html" class="nav-link hover:text-brand-navy transition-colors">Calculator</a>
+ <a href="about.html" class="nav-link hover:text-brand-navy transition-colors">About</a>
+ <a href="webinar.html" class="nav-link hover:text-brand-goldDark transition-colors">Upcoming Training</a>
+ <a href="index.html#faq" class="nav-link hover:text-brand-navy transition-colors">FAQ</a>
+ <a href="checklist.html" class="nav-link hover:text-brand-navy transition-colors">Checklist</a>
+ <a href="book.html" class="nav-link hover:text-brand-navy transition-colors">Book a Review</a>
+ </nav>
+ <a href="webinar.html#register" class="text-xs font-bold uppercase tracking-[0.12em] bg-brand-navy hover:bg-brand-navyHover text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all duration-300 shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:-translate-y-0.5">
+ Join the Free Training
+ </a>
+ <button id="menuBtn" class="lg:hidden ml-2 p-2 text-brand-navy" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+ <svg id="menuIconOpen" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+ <svg id="menuIconClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+ </button>
+ </div>
 
-  <div id="mobileMenu" class="lg:hidden hidden border-t border-brand-border/70 bg-white/95 backdrop-blur-xl">
-    <nav class="px-6 py-2 flex flex-col" aria-label="Mobile">
-      <a href="index.html#philosophy" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Philosophy</a>
-      <a href="index.html#process" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Process</a>
-      <a href="margin-map.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Margin Map</a>
-      <a href="calculator.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Calculator</a>
-      <a href="about.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">About</a>
-      <a href="webinar.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-goldDark hover:text-brand-navy">Upcoming Training</a>
-      <a href="index.html#faq" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">FAQ</a>
-      <a href="checklist.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Checklist</a>
-      <a href="book.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Book a Review</a>
-      <a href="webinar.html#register" class="mt-4 mb-4 text-center bg-brand-navy text-white font-extrabold text-sm uppercase tracking-[0.12em] px-6 py-3.5 rounded-full">Join the Free Training</a>
-    </nav>
-  </div></header>
+ <div id="mobileMenu" class="lg:hidden hidden border-t border-brand-border/70 bg-white/95 backdrop-blur-xl">
+ <nav class="px-6 py-2 flex flex-col" aria-label="Mobile">
+ <a href="index.html#philosophy" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Philosophy</a>
+ <a href="index.html#process" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Process</a>
+ <a href="margin-map.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Margin Map</a>
+ <a href="calculator.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Calculator</a>
+ <a href="about.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">About</a>
+ <a href="webinar.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-goldDark hover:text-brand-navy">Upcoming Training</a>
+ <a href="index.html#faq" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">FAQ</a>
+ <a href="checklist.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Checklist</a>
+ <a href="book.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Book a Review</a>
+ <a href="webinar.html#register" class="mt-4 mb-4 text-center bg-brand-navy text-white font-extrabold text-sm uppercase tracking-[0.12em] px-6 py-3.5 rounded-full">Join the Free Training</a>
+ </nav>
+ </div></header>
 
 <!-- ============ HERO ============ -->
 <section class="relative bg-brand-navy text-white overflow-hidden grain">
-  <div class="blob1 absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-brand-gold/10 blur-3xl"></div>
-  <div class="blob2 absolute -bottom-40 -right-24 w-[560px] h-[560px] rounded-full bg-brand-navyHover/60 blur-3xl"></div>
-  <div class="relative max-w-4xl mx-auto px-6 py-20 md:py-28 text-center">
-    <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-6">About Angora</p>
-    <h1 class="reveal text-4xl md:text-6xl font-extrabold leading-tight mb-6">One consultancy.<br>One industry. One standard.</h1>
-    <div class="reveal gold-rule w-24 mx-auto mb-8"></div>
-    <p class="reveal text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-      Angora works exclusively with ambulance companies. Accuracy first, then efficiency. Everything else follows from that.
-    </p>
-  </div>
+ <div class="blob1 absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-brand-gold/10 blur-3xl"></div>
+ <div class="blob2 absolute -bottom-40 -right-24 w-[560px] h-[560px] rounded-full bg-brand-navyHover/60 blur-3xl"></div>
+ <div class="relative max-w-4xl mx-auto px-6 py-20 md:py-28 text-center">
+ <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-6">About Angora</p>
+ <h1 class="reveal text-4xl md:text-6xl font-extrabold leading-tight mb-6">One consultancy.<br>One industry. One standard.</h1>
+ <div class="reveal gold-rule w-24 mx-auto mb-8"></div>
+ <p class="reveal text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+ Angora works exclusively with ambulance companies. Accuracy first, then efficiency. Everything else follows from that.
+ </p>
+ </div>
 </section>
 
 <!-- ============ WHAT WE DO ============ -->
 <section class="bg-white py-20 md:py-24">
-  <div class="max-w-3xl mx-auto px-6">
-    <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">What we do</p>
-    <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy mb-8">AI enablement for ambulance operators.</h2>
-    <div class="reveal space-y-5 text-slate-600 leading-relaxed text-[17px]">
-      <p>We find the repetitive work eating your team's week and build AI workflows to handle it, inside the tools you already own. No new software. No rip-and-replace. Patient data handled properly: a signed BAA before anything flows, covered tools only, and your data never trains models.</p>
-      <p>Most of the work is unglamorous on purpose: claim-status checks, schedule drafts, recurring reports, credential tracking. The admin load nobody sees and everybody feels.</p>
-      <p>We do it one way: accuracy first, then efficiency. A workflow that is fast but wrong is not a shortcut. It is a liability with better marketing.</p>
-    </div>
-  </div>
+ <div class="max-w-3xl mx-auto px-6">
+ <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">What we do</p>
+ <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy mb-8">AI enablement for ambulance operators.</h2>
+ <div class="reveal space-y-5 text-slate-600 leading-relaxed text-[17px]">
+ <p>We find the repetitive work eating your team's week and build AI workflows to handle it, inside the tools you already own. No new software. No rip-and-replace. Patient data handled properly: a signed BAA before anything flows, covered tools only, and your data never trains models.</p>
+ <p>Most of the work is unglamorous on purpose: claim-status checks, schedule drafts, recurring reports, credential tracking. The admin load nobody sees and everybody feels.</p>
+ <p>We do it one way: accuracy first, then efficiency. A workflow that is fast but wrong is not a shortcut. It is a liability with better marketing.</p>
+ </div>
+ </div>
 </section>
 
 <!-- ============ HOW WE WORK ============ -->
 <section class="bg-brand-section py-20 md:py-24 border-y border-brand-border">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="mb-14">
-      <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">How we work</p>
-      <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy">Four rules. No exceptions.</h2>
-    </div>
-    <div class="grid md:grid-cols-2 gap-5">
-      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
-        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">01</p>
-        <h3 class="font-extrabold text-brand-navy text-lg mb-2">Accuracy first</h3>
-        <p class="text-slate-600 leading-relaxed text-[15px]">Every workflow gets a human verification gate before its output counts. In EMS, a confident wrong answer is worse than a slow right one.</p>
-      </div>
-      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
-        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">02</p>
-        <h3 class="font-extrabold text-brand-navy text-lg mb-2">Inside your tools</h3>
-        <p class="text-slate-600 leading-relaxed text-[15px]">We build in what you already pay for. You keep control, you keep portability, and nothing breaks when a vendor changes its roadmap.</p>
-      </div>
-      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
-        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">03</p>
-        <h3 class="font-extrabold text-brand-navy text-lg mb-2">Meet people where they are</h3>
-        <p class="text-slate-600 leading-relaxed text-[15px]">Some of your staff will love AI. Some will feel threatened by it. We build with both groups, not around them. Adoption is the product.</p>
-      </div>
-      <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
-        <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">04</p>
-        <h3 class="font-extrabold text-brand-navy text-lg mb-2">Patient data, handled properly</h3>
-        <p class="text-slate-600 leading-relaxed text-[15px]">A signed BAA before any patient information flows. Only HIPAA-eligible tools with BAA coverage touch it. Your data never trains models, and every clinical-adjacent output gets a human check.</p>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-5xl mx-auto px-6">
+ <div class="mb-14">
+ <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">How we work</p>
+ <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy">Four rules. No exceptions.</h2>
+ </div>
+ <div class="grid md:grid-cols-2 gap-5">
+ <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+ <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">01</p>
+ <h3 class="font-extrabold text-brand-navy text-lg mb-2">Accuracy first</h3>
+ <p class="text-slate-600 leading-relaxed text-[15px]">Every workflow gets a human verification gate before its output counts. In EMS, a confident wrong answer is worse than a slow right one.</p>
+ </div>
+ <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+ <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">02</p>
+ <h3 class="font-extrabold text-brand-navy text-lg mb-2">Inside your tools</h3>
+ <p class="text-slate-600 leading-relaxed text-[15px]">We build in what you already pay for. You keep control, you keep portability, and nothing breaks when a vendor changes its roadmap.</p>
+ </div>
+ <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+ <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">03</p>
+ <h3 class="font-extrabold text-brand-navy text-lg mb-2">Meet people where they are</h3>
+ <p class="text-slate-600 leading-relaxed text-[15px]">Some of your staff will love AI. Some will feel threatened by it. We build with both groups, not around them. Adoption is the product.</p>
+ </div>
+ <div class="reveal bg-brand-card border border-brand-border rounded-2xl p-8">
+ <p class="font-mono text-brand-goldDark text-sm font-bold mb-3">04</p>
+ <h3 class="font-extrabold text-brand-navy text-lg mb-2">Patient data, handled properly</h3>
+ <p class="text-slate-600 leading-relaxed text-[15px]">A signed BAA before any patient information flows. Only HIPAA-eligible tools with BAA coverage touch it. Your data never trains models, and every clinical-adjacent output gets a human check.</p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- ============ WHY AMBULANCE ============ -->
 <section class="bg-white py-20 md:py-24">
-  <div class="max-w-3xl mx-auto px-6">
-    <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">Why ambulance</p>
-    <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy mb-8">Why this industry.</h2>
-    <div class="reveal space-y-5 text-slate-600 leading-relaxed text-[17px]">
-      <p>My mom spent her life in EMS, from paramedic to operational support. I grew up watching independent operators get squeezed from every direction: reimbursement pressure, staffing shortages, and admin load that grows faster than revenue.</p>
-      <p>AI can give a 30-person company the operational leverage of a much larger one. But only if it is built for accuracy, inside tools they already own, by someone who learns your operation first.</p>
-      <p>That is the whole company. Keeping independents in business so communities keep coverage.</p>
-    </div>
-  </div>
+ <div class="max-w-3xl mx-auto px-6">
+ <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">Why ambulance</p>
+ <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy mb-8">Why this industry.</h2>
+ <div class="reveal space-y-5 text-slate-600 leading-relaxed text-[17px]">
+ <p>My mom spent her life in EMS, from paramedic to operational support. I grew up watching independent operators get squeezed from every direction: reimbursement pressure, staffing shortages, and admin load that grows faster than revenue.</p>
+ <p>AI can give a 30-person company the operational leverage of a much larger one. But only if it is built for accuracy, inside tools you already own, by someone who learns your operation first.</p>
+ <p>That is the whole company. Keeping independents in business so communities keep coverage.</p>
+ </div>
+ </div>
 </section>
 
 <!-- ============ WHO ============ -->
 <section class="bg-brand-navy text-white py-20 md:py-24 grain relative overflow-hidden">
-  <div class="relative max-w-3xl mx-auto px-6 text-center">
-    <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-4">Who</p>
-    <h2 class="reveal text-3xl md:text-4xl font-extrabold mb-6">Matthew Easterday</h2>
-    <p class="reveal text-white/70 leading-relaxed max-w-xl mx-auto mb-10">Founder, Angora AI Consulting. I do the work myself: the calls, the maps, the builds. When you hire Angora, you get me, not a junior team learning your industry on your dime.</p>
-    <a href="webinar.html#register" class="reveal inline-flex justify-center items-center bg-brand-gold hover:bg-white text-brand-navy font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_40px_-10px_rgba(191,162,130,.6)]">
-      Register for the Free Training
-    </a>
-  </div>
+ <div class="relative max-w-3xl mx-auto px-6 text-center">
+ <p class="reveal font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-4">Who</p>
+ <h2 class="reveal text-3xl md:text-4xl font-extrabold mb-6">Matthew Easterday</h2>
+ <p class="reveal text-white/70 leading-relaxed max-w-xl mx-auto mb-10">Founder, Angora AI Consulting. I do the work myself: the calls, the maps, the builds. When you hire Angora, you get me, not a junior team learning your industry on your dime.</p>
+ <a href="webinar.html#register" class="reveal inline-flex justify-center items-center bg-brand-gold hover:bg-white text-brand-navy font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_40px_-10px_rgba(191,162,130,.6)]">
+ Book the Free Review
+ </a>
+ </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
 <footer class="bg-brand-navyDeep text-white/50 py-12">
-  <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6">
-    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs font-semibold uppercase tracking-[0.14em]">
-      <a href="margin-map.html" class="hover:text-brand-gold transition-colors">AI Margin Map</a>
-      <a href="calculator.html" class="hover:text-brand-gold transition-colors">ROI Calculator</a>
-      <a href="about.html" class="hover:text-brand-gold transition-colors">About</a>
-      <a href="checklist.html" class="hover:text-brand-gold transition-colors">Checklist</a>
-      <a href="webinar.html" class="hover:text-brand-gold transition-colors">Upcoming Training</a>
-    </div>
-    <div class="flex flex-col md:flex-row items-center justify-between gap-6 w-full">
-      <div class="flex items-center gap-4">
-        <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-10 w-auto object-contain rounded-lg bg-white px-2 py-1">
-        <div>
-          <p class="text-white font-bold text-sm">Angora AI Consulting</p>
-          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold/80">Making the exceptional accessible</p>
-        </div>
-      </div>
-      <a href="mailto:matthew@angoraaiconsulting.com" class="text-sm hover:text-brand-gold transition-colors font-medium">matthew@angoraaiconsulting.com</a>
-      <p class="text-xs">© <span id="year">2026</span> Angora AI Consulting. All rights reserved.</p>
-    </div>
-  </div>
+ <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6">
+ <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs font-semibold uppercase tracking-[0.14em]">
+ <a href="margin-map.html" class="hover:text-brand-gold transition-colors">AI Margin Map</a>
+ <a href="calculator.html" class="hover:text-brand-gold transition-colors">ROI Calculator</a>
+ <a href="about.html" class="hover:text-brand-gold transition-colors">About</a>
+ <a href="checklist.html" class="hover:text-brand-gold transition-colors">Checklist</a>
+ <a href="webinar.html" class="hover:text-brand-gold transition-colors">Upcoming Training</a>
+ </div>
+ <div class="flex flex-col md:flex-row items-center justify-between gap-6 w-full">
+ <div class="flex items-center gap-4">
+ <img src="Angora Logo_2.jpg" alt="Angora AI Consulting" class="h-10 w-auto object-contain rounded-lg bg-white px-2 py-1">
+ <div>
+ <p class="text-white font-bold text-sm">Angora AI Consulting</p>
+ <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold/80">Making the exceptional accessible</p>
+ </div>
+ </div>
+ <a href="mailto:matthew@angoraaiconsulting.com" class="text-sm hover:text-brand-gold transition-colors font-medium">matthew@angoraaiconsulting.com</a>
+ <p class="text-xs">© <span id="year">2026</span> Angora AI Consulting. All rights reserved.</p>
+ </div>
+ </div>
 </footer>
 
 <script>
@@ -223,22 +223,22 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 <script>
-  (function () {
-    var btn = document.getElementById('menuBtn');
-    var menu = document.getElementById('mobileMenu');
-    if (!btn || !menu) return;
-    var iconOpen = document.getElementById('menuIconOpen');
-    var iconClose = document.getElementById('menuIconClose');
-    function setOpen(open) {
-      menu.classList.toggle('hidden', !open);
-      iconOpen.classList.toggle('hidden', open);
-      iconClose.classList.toggle('hidden', !open);
-      btn.setAttribute('aria-expanded', String(open));
-    }
-    btn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
-    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
-  })();
+ (function () {
+ var btn = document.getElementById('menuBtn');
+ var menu = document.getElementById('mobileMenu');
+ if (!btn || !menu) return;
+ var iconOpen = document.getElementById('menuIconOpen');
+ var iconClose = document.getElementById('menuIconClose');
+ function setOpen(open) {
+ menu.classList.toggle('hidden', !open);
+ iconOpen.classList.toggle('hidden', open);
+ iconClose.classList.toggle('hidden', !open);
+ btn.setAttribute('aria-expanded', String(open));
+ }
+ btn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
+ menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+ document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+ })();
 </script>
 </body>
 </html>
