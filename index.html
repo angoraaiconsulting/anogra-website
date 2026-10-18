@@ -117,8 +117,11 @@ tailwind.config = {
     NOTE: rail offsets are tuned to the node sizes (w-12 mobile, w-16 md+).
     If node dimensions change, update the two left offsets together. */
  .tl-spine { position: relative; }
+ /* Room below the final card so the "ongoing" label never touches its
+    border. ol.tl-spine outranks the p-0 utility by specificity. */
+ ol.tl-spine { padding-bottom: 54px; }
  .tl-spine::before {
- content: ""; position: absolute; top: 16px; bottom: 16px; left: 23px;
+ content: ""; position: absolute; top: 16px; bottom: 70px; left: 23px;
  width: 2px; background: #E2E8F0; border-radius: 9999px;
  }
  @media (min-width: 768px) {
@@ -129,7 +132,7 @@ tailwind.config = {
  .tl-node-on-navy { box-shadow: 0 0 0 8px #0B2545; }
  /* The spine fades past the last stage: the journey does not end */
  .tl-spine::after {
- content: "ongoing"; position: absolute; bottom: -8px; left: 52px;
+ content: "ongoing"; position: absolute; bottom: 16px; left: 52px;
  font-family: '"JetBrains Mono"', monospace; font-size: 11px; font-weight: 700;
  text-transform: uppercase; letter-spacing: 0.2em; color: #8F7150;
  }
