@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How Many Hours Is Your Operation Losing? | Angora AI Consulting</title>
-<meta name="description" content="Three numbers, thirty seconds. See how many hours and dollars your ambulance operation loses to repetitive admin every year. The math is shown.">
+<meta name="description" content="Three numbers, thirty seconds. See how many hours and dollars your operation spends on repetitive admin every year, on your numbers. The math is shown.">
 <link rel="canonical" href="https://angoraaiconsulting.com/calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Angora AI Consulting">
 <meta property="og:title" content="How Many Hours Is Your Operation Losing? | Angora AI Consulting">
-<meta property="og:description" content="Three numbers, thirty seconds. See how many hours and dollars your ambulance operation loses to repetitive admin every year. The math is shown.">
+<meta property="og:description" content="Three numbers, thirty seconds. See how many hours and dollars your operation spends on repetitive admin every year, on your numbers. The math is shown.">
 <meta property="og:url" content="https://angoraaiconsulting.com/calculator.html">
 <meta property="og:image" content="https://angoraaiconsulting.com/Angora%20Logo_2.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="How Many Hours Is Your Operation Losing? | Angora AI Consulting">
-<meta name="twitter:description" content="Three numbers, thirty seconds. See how many hours and dollars your ambulance operation loses to repetitive admin every year. The math is shown.">
+<meta name="twitter:description" content="Three numbers, thirty seconds. See how many hours and dollars your operation spends on repetitive admin every year, on your numbers. The math is shown.">
 <meta name="twitter:image" content="https://angoraaiconsulting.com/Angora%20Logo_2.jpg">
 <script type="application/ld+json">
 {
@@ -159,33 +159,34 @@ tailwind.config = {
 
  <!-- Inputs -->
  <div class="reveal bg-brand-card border border-brand-border rounded-3xl p-8 md:p-10">
- <h2 class="font-extrabold text-brand-navy text-xl mb-8">Your numbers</h2>
+ <h2 class="font-extrabold text-brand-navy text-xl mb-2">Your numbers</h2>
+ <p class="text-sm text-slate-500 mb-8">Enter your own figures. Nothing is pre-filled.</p>
 
  <div class="mb-8">
  <div class="flex justify-between items-baseline mb-3">
  <label class="text-sm font-bold text-brand-navy">Office and admin staff</label>
- <span id="v-staff" class="font-mono font-bold text-brand-navy text-xl">4</span>
+ <span id="v-staff" class="font-mono font-bold text-brand-navy text-xl">–</span>
  </div>
- <input id="in-staff" type="range" min="1" max="30" value="4" step="1">
+ <input id="in-staff" type="range" min="1" max="30" step="1">
  <p class="text-xs text-slate-400 mt-2">Everyone who touches schedules, billing, reports, or crew paperwork.</p>
  </div>
 
  <div class="mb-8">
  <div class="flex justify-between items-baseline mb-3">
  <label class="text-sm font-bold text-brand-navy">Repetitive hours per person, per week</label>
- <span class="font-mono font-bold text-brand-navy text-xl"><span id="v-hrs">6</span>h</span>
+ <span class="font-mono font-bold text-brand-navy text-xl"><span id="v-hrs">–</span>h</span>
  </div>
- <input id="in-hrs" type="range" min="1" max="20" value="6" step="1">
+ <input id="in-hrs" type="range" min="1" max="20" step="1">
  <p class="text-xs text-slate-400 mt-2">Copy-paste work, chasing statuses, reformatting reports. Be honest.</p>
  </div>
 
  <div class="mb-2">
  <div class="flex justify-between items-baseline mb-3">
  <label class="text-sm font-bold text-brand-navy">Loaded cost per hour</label>
- <span class="font-mono font-bold text-brand-navy text-xl">$<span id="v-cost">32</span></span>
+ <span class="font-mono font-bold text-brand-navy text-xl">$<span id="v-cost">–</span></span>
  </div>
- <input id="in-cost" type="range" min="15" max="60" value="32" step="1">
- <p class="text-xs text-slate-400 mt-2">Wage plus benefits and overhead. Many operators enter $30 to $35 for admin roles.</p>
+ <input id="in-cost" type="range" min="15" max="60" step="1">
+ <p class="text-xs text-slate-400 mt-2">Wage plus benefits and overhead.</p>
  </div>
  </div>
 
@@ -194,25 +195,26 @@ tailwind.config = {
  <h2 class="font-extrabold text-xl mb-8">What it costs you</h2>
  <div class="space-y-7">
  <div>
- <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold mb-1">Hours lost per year</p>
- <p class="font-mono font-bold text-5xl"><span id="r-hours">1,248</span></p>
+ <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold mb-1">Hours per year</p>
+ <p class="font-mono font-bold text-5xl"><span id="r-hours">–</span></p>
  </div>
  <div>
  <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold mb-1">Dollars per year</p>
- <p class="font-mono font-bold text-5xl">$<span id="r-dollars">39,936</span></p>
+ <p class="font-mono font-bold text-5xl">$<span id="r-dollars">–</span></p>
  </div>
  <div>
  <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold mb-1">That is</p>
- <p class="text-xl font-bold"><span id="r-fte">0.6</span> full-time equivalent <span class="text-white/50 font-medium">doing nothing but repetitive admin.</span></p>
+ <p class="text-xl font-bold"><span id="r-fte">–</span> full-time equivalent doing repetitive admin.</p>
  </div>
  </div>
  <div class="gold-rule my-8"></div>
- <p class="font-mono text-xs text-white/40 leading-relaxed" id="r-math">4 staff × 6 hrs/wk × 52 wks = 1,248 hrs/yr<br>1,248 hrs × $32/hr = $39,936/yr</p>
+ <p class="font-mono text-xs text-white/40 leading-relaxed" id="r-math">Enter all three numbers to see the math.</p>
+ <p class="font-mono text-xs text-white/40 leading-relaxed mt-4">This is your estimate from your inputs, not a savings promise and not a result Angora guarantees.</p>
  </div>
  </div>
 
  <p class="reveal text-center text-slate-500 text-sm mt-10 max-w-2xl mx-auto leading-relaxed">
- Conservative on purpose. It counts only repetitive admin, not the errors, the rework, or the turnover it causes. The real number is higher.
+ This counts only repetitive admin, on the numbers you entered. It does not count errors, rework, or turnover. The next step is to find where those hours go.
  </p>
  </div>
 </section>
@@ -220,17 +222,15 @@ tailwind.config = {
 <!-- ============ NEXT STEP ============ -->
 <section class="bg-brand-section py-20 md:py-24 border-y border-brand-border">
  <div class="max-w-3xl mx-auto px-6 text-center">
- <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">You know the cost.<br>Next, find where it goes.</h2>
- <p class="reveal text-slate-600 leading-relaxed mb-8 max-w-xl mx-auto">The calculator tells you how much. The Curse of the Curve checklist tells you where. Seven questions, two minutes, and you will know exactly which workflows to fix first.</p>
+ <h2 class="reveal text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">You know the cost.<br>Next, talk it through.</h2>
+ <p class="reveal text-slate-600 leading-relaxed mb-8 max-w-xl mx-auto">The calculator tells you how much, on the numbers you entered. The next step is a free 30-minute AI Opportunity Review: a simple discussion about where you are in your AI journey and whether I can help with what you are looking for. After the call, you receive a one-page summary within 3 business days.</p>
  <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
- <a href="checklist.html" class="inline-flex justify-center items-center bg-brand-navy hover:bg-brand-navyHover text-white font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-brand-navy/20">
- Take the assessment
- </a>
- <a href="margin-map.html" class="inline-flex justify-center items-center border-2 border-brand-navy/15 hover:border-brand-gold text-brand-navy font-bold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300">
- See the Foundation
+ <a href="book.html" class="inline-flex justify-center items-center bg-brand-navy hover:bg-brand-navyHover text-white font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-brand-navy/20">
+ Book the free review
  </a>
  </div>
- <p class="reveal mt-6 text-sm text-slate-500">Or skip ahead: <a href="book.html" class="text-brand-navy font-bold underline hover:text-brand-goldDark">book the free review</a></p>
+ <!-- Integration note 2026-10-27 (Oct 27 review findings C12/W4): the small-text checklist line below survives only if the founder rules that secondary link is not a call to action. Otherwise it must be removed. -->
+ <p class="reveal mt-6 text-sm text-slate-500">Or start with the <a href="checklist.html" class="text-brand-navy font-bold underline hover:text-brand-goldDark">checklist</a> first, then bring the items you checked to your review.</p>
  </div>
 </section>
 
@@ -272,7 +272,20 @@ function fill(el) {
 }
 function fmt(n) { return n.toLocaleString('en-US'); }
 
+/* Oct 27 review finding C13: inputs start blank. A slider only counts once the visitor moves it, so untouched sliders never silently supply a default. */
+const touched = new Set();
 function calc() {
+ if (touched.size < 3) {
+  document.getElementById('v-staff').textContent = touched.has('in-staff') ? staff.value : '–';
+  document.getElementById('v-hrs').textContent = touched.has('in-hrs') ? hrs.value : '–';
+  document.getElementById('v-cost').textContent = touched.has('in-cost') ? cost.value : '–';
+  document.getElementById('r-hours').textContent = '–';
+  document.getElementById('r-dollars').textContent = '–';
+  document.getElementById('r-fte').textContent = '–';
+  document.getElementById('r-math').textContent = 'Enter all three numbers to see the math.';
+  [staff, hrs, cost].forEach(fill);
+  return;
+ }
  const s = +staff.value, h = +hrs.value, c = +cost.value;
  const hours = s * h * 52;
  const dollars = hours * c;
@@ -288,8 +301,7 @@ function calc() {
  fmt(hours) + ' hrs × $' + c + '/hr = $' + fmt(dollars) + '/yr';
  [staff, hrs, cost].forEach(fill);
 }
-[staff, hrs, cost].forEach(el => el.addEventListener('input', calc));
-calc();
+[staff, hrs, cost].forEach(el => el.addEventListener('input', e => { touched.add(e.target.id); calc(); }));
 </script>
 <script>
  (function () {

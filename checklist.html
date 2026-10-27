@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Curse of the Curve Checklist | Angora AI Consulting</title>
-<meta name="description" content="Seven ways AI quietly eats hours instead of saving them. Check how many sound familiar, get your score, and get the fixes. Free from Angora AI Consulting.">
+<meta name="description" content="Seven ways AI quietly eats hours instead of saving them. Check how many sound familiar, then bring the ones you checked to your free review.">
 <link rel="canonical" href="https://angoraaiconsulting.com/checklist.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Angora AI Consulting">
 <meta property="og:title" content="The Curse of the Curve Checklist | Angora AI Consulting">
-<meta property="og:description" content="Seven ways AI quietly eats hours instead of saving them. Check how many sound familiar, get your score, and get the fixes. Free from Angora AI Consulting.">
+<meta property="og:description" content="Seven ways AI quietly eats hours instead of saving them. Check how many sound familiar, then bring the ones you checked to your free review.">
 <meta property="og:url" content="https://angoraaiconsulting.com/checklist.html">
 <meta property="og:image" content="https://angoraaiconsulting.com/Angora%20Logo_2.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Curse of the Curve Checklist | Angora AI Consulting">
-<meta name="twitter:description" content="Seven ways AI quietly eats hours instead of saving them. Check how many sound familiar, get your score, and get the fixes. Free from Angora AI Consulting.">
+<meta name="twitter:description" content="Seven ways AI quietly eats hours instead of saving them. Check how many sound familiar, then bring the ones you checked to your free review.">
 <meta name="twitter:image" content="https://angoraaiconsulting.com/Angora%20Logo_2.jpg">
 <script type="application/ld+json">
 {
@@ -225,10 +225,7 @@ tailwind.config = {
  <div class="max-w-4xl mx-auto px-6">
  <div class="text-center mb-12">
  <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-goldDark mb-4">The seven places the curve gets steep. Check each one that sounds familiar.</p>
- <div class="inline-flex items-center gap-3 bg-brand-section border border-brand-border rounded-full px-6 py-3">
- <span id="score-count" class="font-mono font-bold text-2xl text-brand-navy">0</span>
- <span class="text-sm text-slate-500 font-medium">of 7 checked</span>
- </div>
+ <!-- Oct 27 review finding C14: the checked-count pill is removed with the scoring. No score is shown anywhere on this page. -->
  </div>
 
  <div id="checklist" class="space-y-4">
@@ -333,12 +330,9 @@ tailwind.config = {
 
  </div>
 
- <!-- ============ SCORE ============ -->
- <div id="score-panel" class="mt-12 bg-brand-navy text-white rounded-3xl p-8 md:p-12 text-center grain relative overflow-hidden">
- <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-gold mb-4">Your score</p>
- <p class="text-6xl font-extrabold mb-4"><span id="score-big">0</span><span class="text-white/40 text-3xl"> / 7</span></p>
- <h3 id="score-title" class="text-2xl font-bold mb-3">Start checking above.</h3>
- <p id="score-desc" class="text-white/70 max-w-xl mx-auto leading-relaxed">Tap each item that sounds familiar. Your result appears here.</p>
+ <!-- ============ BRING THEM TO YOUR REVIEW ============ -->
+ <div id="checked-panel" class="mt-12 bg-brand-navy text-white rounded-3xl p-8 md:p-12 text-center grain relative overflow-hidden">
+ <p class="text-white/90 max-w-xl mx-auto leading-relaxed">Check each one that sounds familiar, then bring the ones you checked to your free review. No score. These are discussion starters, not a diagnosis.</p>
  </div>
  </div>
 </section>
@@ -351,7 +345,7 @@ tailwind.config = {
  <div class="bg-white rounded-3xl border border-brand-border shadow-xl shadow-brand-navy/5 overflow-hidden">
  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRNeiancU59mPR4Q66F4-0hYJ2rmOh0CgGtxwWtLqvnMulWA/viewform?embedded=true" width="100%" height="720" frameborder="0" marginheight="0" marginwidth="0" title="Get the Curse of the Curve checklist">Loading…</iframe>
  </div>
- <p class="text-xs text-slate-400 mt-4">Your score is <span id="form-score">0</span>/7. Mention it on the form so I can point you at the right fix first.</p>
+ <p class="text-xs text-slate-400 mt-4">Mention the items you checked on the form so I can point you at the right fix first.</p>
  </div>
 </section>
 
@@ -361,7 +355,7 @@ tailwind.config = {
  <div class="gold-rule w-24 mx-auto mb-10"></div>
  <p class="text-xl md:text-2xl text-slate-700 leading-relaxed mb-6">The fix is not a better tool. It is turning one-off wins into workflows that run the same way every time, with a check before anything counts.</p>
  <p class="text-lg text-slate-600 leading-relaxed mb-10">Your team does not have to climb the second curve alone. That is the job you hire out, or hire a guide for, unless you have someone inside with real time to build.</p>
- <p class="text-slate-600 leading-relaxed mb-10">Want to talk it through? I run free 30 minute AI Opportunity Reviews. A simple discussion to see where you are in your AI journey, and whether I can help with what you are looking for.</p>
+ <p class="text-slate-600 leading-relaxed mb-10">Want to talk it through? I run free 30 minute AI Opportunity Reviews. A simple discussion to see where you are in your AI journey, and whether I can help with what you are looking for. After the call, you receive a one-page summary within 3 business days.</p>
  <a href="book.html" class="inline-flex justify-center items-center bg-brand-navy hover:bg-brand-navyHover text-white font-extrabold text-sm uppercase tracking-[0.12em] px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-brand-navy/20">
  Request your free review
  </a>
@@ -397,34 +391,10 @@ const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecti
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* ---------- Checklist scoring ---------- */
-const bands = [
- { max: 2, title: "Ahead of most.", desc: "You are ahead of most companies. The curve has not caught you yet. Keep the checks in place and review them twice a year." },
- { max: 4, title: "The curve is eating your week.", desc: "Real hours are leaking. Pick the two items you checked and fix those first. Small, in order, verified." },
- { max: 7, title: "Paying for AI and doing the work anyway.", desc: "You are spending twice: once on the tools, once on the manual work. This is exactly what the Foundation is built to unwind." }
-];
+/* ---------- Checklist toggling (Oct 27 review finding C14: no scoring, no verdicts) ---------- */
 const cards = document.querySelectorAll('.check-card');
-const scoreCount = document.getElementById('score-count');
-const scoreBig = document.getElementById('score-big');
-const scoreTitle = document.getElementById('score-title');
-const scoreDesc = document.getElementById('score-desc');
-const formScore = document.getElementById('form-score');
-let started = false;
-
-function updateScore() {
- const n = document.querySelectorAll('.check-card.checked').length;
- scoreCount.textContent = n;
- scoreBig.textContent = n;
- formScore.textContent = n;
- if (!started && n > 0) started = true;
- if (started) {
- const band = bands.find(b => n <= b.max);
- scoreTitle.textContent = band.title;
- scoreDesc.textContent = band.desc;
- }
-}
 cards.forEach(card => {
- card.addEventListener('click', () => { card.classList.toggle('checked'); updateScore(); });
+ card.addEventListener('click', () => { card.classList.toggle('checked'); });
 });
 
 </script>
