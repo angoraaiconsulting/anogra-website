@@ -168,7 +168,6 @@ tailwind.config = {
 
  /* Mono chips */
  .chip { display: inline-block; font-family: '"JetBrains Mono"', monospace; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; border-radius: 9999px; padding: 0.35rem 0.8rem; }
- .chip-diy { background: #E8DFD5; color: #0B2545; border: 1px solid #BFA282; }
  .chip-destination { background: transparent; color: #8F7150; border: 1px dashed #BFA282; }
 
  /* Ghost card and hollow node: the horizon is a destination, not a product */
@@ -215,11 +214,11 @@ tailwind.config = {
  <nav class="hidden lg:flex items-center gap-7 text-[12px] font-bold uppercase tracking-[0.14em] text-brand-navy/80">
  <a href="#philosophy" class="nav-link hover:text-brand-navy transition-colors">Philosophy</a>
  <a href="#process" class="nav-link hover:text-brand-navy transition-colors">Process</a>
-<a href="margin-map.html" class="nav-link hover:text-brand-navy transition-colors">Foundation</a>
+<a href="margin-map.html" class="nav-link hover:text-brand-navy transition-colors">How it works</a>
  <a href="calculator.html" class="nav-link hover:text-brand-navy transition-colors">Calculator</a>
  <a href="#faq" class="nav-link hover:text-brand-navy transition-colors">FAQ</a>
  <a href="checklist.html" class="nav-link hover:text-brand-navy transition-colors">Checklist</a>
- <a href="book.html" class="nav-link hover:text-brand-navy transition-colors">Book a Review</a>
+ <a href="book.html" class="nav-link hover:text-brand-navy transition-colors">Book a conversation</a>
  </nav>
  <a href="book.html" class="font-mono uppercase tracking-[0.18em] text-[11px] hover:text-brand-gold transition-colors"><span class="text-brand-gold font-bold">Book a conversation:</span> 30 minutes, private EMS owners. <span class="underline">Book now</span></a>
  <button id="menuBtn" class="lg:hidden ml-2 p-2 text-brand-navy" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -232,11 +231,11 @@ tailwind.config = {
  <nav class="px-6 py-2 flex flex-col" aria-label="Mobile">
  <a href="#philosophy" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Philosophy</a>
  <a href="#process" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Process</a>
- <a href="margin-map.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Foundation</a>
+ <a href="margin-map.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">How it works</a>
  <a href="calculator.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Calculator</a>
  <a href="#faq" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">FAQ</a>
  <a href="checklist.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Checklist</a>
- <a href="book.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Book a Review</a>
+ <a href="book.html" class="py-3.5 border-b border-brand-border/60 font-bold text-sm uppercase tracking-[0.12em] text-brand-navy/80 hover:text-brand-navy">Book a conversation</a>
  <a href="book.html" class="font-mono uppercase tracking-[0.18em] text-[11px] hover:text-brand-gold transition-colors"><span class="text-brand-gold font-bold">Book a conversation:</span> 30 minutes, private EMS owners. <span class="underline">Book now</span></a>
  </nav>
  </div></header>
@@ -268,7 +267,7 @@ tailwind.config = {
  See the 7 places to check
  </a>
  </div>
- <p class="reveal reveal-d3 mt-6 text-white/60 text-sm">Or skip the wait: <a href="book.html" class="text-brand-gold font-bold underline hover:text-white">book a free 30 minute review</a></p>
+ <p class="reveal reveal-d3 mt-6 text-white/60 text-sm">Or skip the wait: <a href="book.html" class="text-brand-gold font-bold underline hover:text-white">book a 30 minute conversation</a></p>
 
  <div class="reveal reveal-d3 mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10">
  <div class="bg-brand-navy/60 backdrop-blur px-6 py-6">
@@ -276,11 +275,11 @@ tailwind.config = {
  <p class="text-white/60 text-sm mt-1 font-medium">workflow at a time</p>
  </div>
  <div class="bg-brand-navy/60 backdrop-blur px-6 py-6">
- <p class="font-mono text-brand-gold text-3xl font-bold">5</p>
- <p class="text-white/60 text-sm mt-1 font-medium">owner, one due date</p>
+ <p class="font-mono text-brand-gold text-3xl font-bold">1</p>
+ <p class="text-white/60 text-sm mt-1 font-medium">one owner, one due date</p>
  </div>
  <div class="bg-brand-navy/60 backdrop-blur px-6 py-6">
- <p class="font-mono text-brand-gold text-3xl font-bold">3</p>
+ <p class="font-mono text-brand-gold text-3xl font-bold">1</p>
  <p class="text-white/60 text-sm mt-1 font-medium">weekly report</p>
  </div>
  <div class="bg-brand-navy/60 backdrop-blur px-6 py-6">
@@ -334,7 +333,7 @@ tailwind.config = {
  <div>
  <p class="font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.25em] mb-3">Strategic restraint</p>
  <h3 class="text-2xl md:text-4xl font-extrabold text-brand-navy tracking-tight mb-4">The "could we vs. should we" test.</h3>
- <p class="text-slate-600 text-lg leading-relaxed max-w-2xl">Just because a process <em>can</em> use AI does not mean it <em>should</em>, and not everything that works as an assist deserves to become a pilot. I run the could-we vs. should-we test at every stage, and I name what not to automate in the Foundation readout. Saying no to the wrong automation is how the right ones survive the journey.</p>
+ <p class="text-slate-600 text-lg leading-relaxed max-w-2xl">Just because a process <em>can</em> use AI does not mean it <em>should</em>, and not everything that works as an assist deserves to become a pilot. I run the could-we vs. should-we test at every stage, and I name what not to automate in the written plan. Saying no to the wrong automation is how the right ones survive the journey.</p>
  </div>
  </div>
  <!-- 03 -->
@@ -350,8 +349,8 @@ tailwind.config = {
 
  <!-- Bridge to the journey -->
  <div class="reveal text-center max-w-2xl mx-auto mt-14 md:mt-16">
- <p class="text-lg text-slate-600 leading-relaxed mb-6">These rules pay off over time. Here is what the path actually looks like, stage by stage, and what each stage honestly demands.</p>
- <a href="#journey" class="inline-block font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.25em] border-b-2 border-brand-gold pb-1 hover:text-brand-navy hover:border-brand-navy transition-colors">See the journey</a>
+ <p class="text-lg text-slate-600 leading-relaxed mb-6">These rules pay off over time. Here is how the work runs, one workflow at a time.</p>
+ <a href="#process" class="inline-block font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.25em] border-b-2 border-brand-gold pb-1 hover:text-brand-navy hover:border-brand-navy transition-colors">See how the work runs</a>
  </div>
  </div>
 </section>
@@ -374,215 +373,14 @@ tailwind.config = {
  <div class="gold-rule"></div>
 </section>
 
-<!-- ============ THE PYRAMID ============ -->
-<section id="process" class="bg-white py-20 md:py-28">
- <div class="max-w-7xl mx-auto px-6">
- <div class="text-center max-w-3xl mx-auto mb-16">
- <p class="reveal font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.3em] mb-6">How the work runs</p>
- <h2 class="reveal reveal-d1 text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight">Nothing is built on an <span class="text-brand-goldDark">unfinished foundation.</span></h2>
- <p class="reveal reveal-d2 mt-5 text-lg text-slate-600">Three layers, bottom up. Each one is earned by the one below it.</p>
- </div>
-
- <div class="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
- <div class="reveal relative bg-brand-bg rounded-2xl border border-brand-border p-7 hover:border-brand-gold hover:shadow-[0_20px_50px_-20px_rgba(11,37,69,.25)] transition-all duration-500 hover:-translate-y-1.5">
- <p class="font-mono text-brand-goldDark text-xs font-bold tracking-[0.25em] mb-1">THE FOUNDATION</p>
- <p class="font-mono text-slate-400 text-[11px] font-bold uppercase tracking-[0.2em] mb-4">Stages 1-3</p>
- <h3 class="text-xl font-extrabold text-brand-navy mb-3">Readiness first</h3>
- <p class="text-slate-600 leading-relaxed text-[15px]">Your team trained on safe AI use. Every repetitive workflow inventoried and scored. Your tech stack mapped. BAA and AI policy drafts in hand. A sequenced roadmap that says what to build, in what order, and what not to build. Nothing gets built until this is done.</p>
- <a href="margin-map.html" class="inline-block mt-5 text-brand-goldDark font-bold text-sm uppercase tracking-[0.12em] hover:text-brand-navy transition-colors">See the Foundation</a>
- </div>
- <div class="reveal reveal-d1 relative bg-brand-bg rounded-2xl border border-brand-border p-7 hover:border-brand-gold hover:shadow-[0_20px_50px_-20px_rgba(11,37,69,.25)] transition-all duration-500 hover:-translate-y-1.5">
- <p class="font-mono text-brand-goldDark text-xs font-bold tracking-[0.25em] mb-1">THE BUILD</p>
- <p class="font-mono text-slate-400 text-[11px] font-bold uppercase tracking-[0.2em] mb-4">Stage 4</p>
- <h3 class="text-xl font-extrabold text-brand-navy mb-3">Pilots, then rollout</h3>
- <p class="text-slate-600 leading-relaxed text-[15px]">One pilot at a time, each with a runbook. Then the wider rollout of what the pilots proved. Built inside the tools you may already own, with your team and not around them. You keep the workflows, the SOPs, and the walkthroughs.</p>
- </div>
- <div class="reveal reveal-d2 relative bg-brand-bg rounded-2xl border border-brand-border p-7 hover:border-brand-gold hover:shadow-[0_20px_50px_-20px_rgba(11,37,69,.25)] transition-all duration-500 hover:-translate-y-1.5">
- <p class="font-mono text-brand-goldDark text-xs font-bold tracking-[0.25em] mb-1">AI EXPERT ON STAFF</p>
- <p class="font-mono text-slate-400 text-[11px] font-bold uppercase tracking-[0.2em] mb-4">Stages 5-6</p>
- <h3 class="text-xl font-extrabold text-brand-navy mb-3">The ongoing partnership</h3>
- <p class="text-slate-600 leading-relaxed text-[15px]">The AI keeps running. When a delivered workflow breaks, I work the fix under the retainer. Every quarter, I review what it is delivering. $1,000 per month, flat. Retainer replies come in the evening, not during the business day. Available after the build proves itself.</p>
- </div>
- </div>
- </div>
-</section>
-
-<!-- ============ THE AI JOURNEY ============ -->
-<section id="journey" class="bg-white py-20 md:py-28">
- <div class="max-w-7xl mx-auto px-6">
- <div class="text-center max-w-3xl mx-auto mb-14 md:mb-20">
- <p class="reveal font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.3em] mb-6">The AI journey</p>
- <h2 class="reveal reveal-d1 text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight leading-[1.12]">
- From no AI to <span class="text-brand-goldDark">fully integrated.</span>
- </h2>
- <p class="reveal reveal-d2 mt-5 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
- This is not a product to install. It is a long-term commitment to becoming an AI-integrated business. You do not go from no AI to autonomous agents overnight. Every stage earns the next one. This is the pyramid above, laid across time: Foundation first, then Build, then your AI expert on staff. Companies enter at different stages. The arc below reads the same wherever you enter.
- </p>
- </div>
-
- <ol class="tl-spine max-w-3xl mx-auto list-none m-0 p-0">
- <!-- Stage 0: No AI -->
- <li class="reveal relative pl-16 md:pl-24 pb-10 md:pb-12">
- <span class="tl-node absolute left-0 top-0 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-navy text-white font-mono font-bold text-sm md:text-base">00</span>
- <div class="bg-white rounded-3xl border border-brand-border p-7 md:p-9">
- <p class="font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.25em] mb-2">Stage 0 · Start here</p>
- <h3 class="text-xl md:text-2xl font-extrabold text-brand-navy tracking-tight mb-3">No AI</h3>
- <p class="text-slate-600 leading-relaxed mb-3">The operation runs on people, not systems. One person may use ChatGPT on their own, or AI features inside tools you already own. No plan, no policy, no guardrails.</p>
- <p class="text-slate-600 leading-relaxed mb-4"><strong class="text-brand-navy">Where I fit:</strong> A 30 minute conversation about the task you dread, and whether AI can help with it, before you spend anything.</p>
- <p class="inline-block font-mono text-xs font-bold uppercase tracking-[0.15em] text-brand-goldDark bg-brand-goldLight/50 rounded-full px-4 py-2">Free. A 30 minute conversation.</p>
- <details class="tl-details">
- <summary>The research behind this stage</summary>
- <div class="tl-research">
- <p><strong>Why casual use does not count:</strong> McKinsey's November 2025 State of AI update found 39% of respondents reporting some EBIT impact from generative AI (<a href="#src-mckinsey-state">McKinsey, State of AI 2025</a>). Using AI casually and getting value from it are two different things. The companies that get value from it are the ones that treat this as a journey, not a purchase.</p>
- </div>
- </details>
- </div>
- </li>
- <!-- Divider: Foundation stages -->
- <li class="tl-divider reveal"><span>The Foundation · Stages 1-3</span></li>
- <!-- Stage 1: Literacy -->
- <li class="reveal relative pl-16 md:pl-24 pb-10 md:pb-12">
- <span class="tl-node absolute left-0 top-0 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-navy text-white font-mono font-bold text-sm md:text-base">01</span>
- <div class="bg-white rounded-3xl border border-brand-border p-7 md:p-9">
- <p class="font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.25em] mb-2">Stage 1 · Foundation</p>
- <h3 class="text-xl md:text-2xl font-extrabold text-brand-navy tracking-tight mb-3">Literacy</h3>
- <p class="text-slate-600 leading-relaxed mb-3">The team learns what AI does well, where it fails, and what never goes into it. Safe use, data boundaries, handling sensitive information. No tools deployed yet. Just understanding.</p>
- <p class="text-slate-600 leading-relaxed mb-4"><strong class="text-brand-navy">Where I fit:</strong> The training library. Recorded sessions on using AI safely, built around how an ambulance company actually runs. For larger teams, this is where the literacy work starts.</p>
- <p class="inline-block font-mono text-xs font-bold uppercase tracking-[0.15em] text-brand-goldDark bg-brand-goldLight/50 rounded-full px-4 py-2">Library: recorded sessions on using AI safely.</p>
- <details class="tl-details">
- <summary>The research behind this stage</summary>
- <div class="tl-research">
- <p><strong>Why this stage cannot be skipped:</strong> This stage is built around hands-on practice, not just telling people about AI.</p>
- </div>
- </details>
- </div>
- </li>
- <!-- Stage 2: Assisted work -->
- <li class="reveal relative pl-16 md:pl-24 pb-10 md:pb-12">
- <span class="tl-node absolute left-0 top-0 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-navy text-white font-mono font-bold text-sm md:text-base">02</span>
- <div class="bg-white rounded-3xl border border-brand-border p-7 md:p-9">
- <p class="font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.25em] mb-2">Stage 2 · Foundation</p>
- <h3 class="text-xl md:text-2xl font-extrabold text-brand-navy tracking-tight mb-3">Assisted work <span class="chip chip-diy ml-2 align-middle">DIY zone</span></h3>
- <p class="text-slate-600 leading-relaxed mb-3">Individuals use AI inside the tools they may already have for drafting, summarizing, organizing, researching. Faster humans, not automated workflows. No integration yet.</p>
- <p class="text-slate-600 leading-relaxed mb-4"><strong class="text-brand-navy">Where I fit:</strong> This is the DIY zone. Recorded sessions on using AI safely set the guardrails, and companies self-serve with the tools they have. On the free review, I will give you a straight read on whether the Foundation fits your operation. Paid work steps back in at Stage 3.</p>
- <p class="inline-block font-mono text-xs font-bold uppercase tracking-[0.15em] text-brand-goldDark bg-brand-goldLight/50 rounded-full px-4 py-2">Free. Self-serve with your own tools.</p>
- <details class="tl-details">
- <summary>The research behind this stage</summary>
- <div class="tl-research">
- <p><strong>Why this stage matters:</strong> Individual employees get AI tools that assist parts of their jobs, before anything gets automated. This is where the habit forms. Skip this stage and tools often go unused: users try the tool once, find it confusing without guidance, and return to old ways of working. The failure is the deployment, not the tool.</p>
- </div>
- </details>
- </div>
- </li>
- <!-- Stage 3: The Foundation -->
- <li class="reveal relative pl-16 md:pl-24 pb-10 md:pb-12">
- <span class="tl-node absolute left-0 top-0 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-gold text-brand-navy font-mono font-bold text-sm md:text-base">03</span>
- <div class="bg-white rounded-3xl border-2 border-brand-gold p-7 md:p-9">
- <p class="font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.25em] mb-2">Stage 3 · Foundation</p>
- <h3 class="text-xl md:text-2xl font-extrabold text-brand-navy tracking-tight mb-3">The Foundation</h3>
- <p class="text-slate-600 leading-relaxed mb-3">Someone maps the operation properly: which workflows are repetitive and what they cost, what the tech stack can connect to, which licenses are needed. BAA and AI policy drafts, plus a sequenced build order: what to build, in what order, and what not to build.</p>
- <p class="text-slate-600 leading-relaxed mb-4"><strong class="text-brand-navy">Where I fit:</strong> The Foundation engagement. Readiness review, workflow inventory, tech stack map, policy drafts, and a sequenced roadmap with named build candidates. Where both paid paths begin.</p>
- <p class="inline-block font-mono text-xs font-bold uppercase tracking-[0.15em] text-brand-navy bg-brand-gold/25 rounded-full px-4 py-2">The Foundation. A measured starting point.</p>
- <p class="text-sm text-slate-500 leading-relaxed mt-4">Decision gate: the Foundation ends with a roadmap and a do-not-automate list. You decide whether anything gets built.</p>
- <details class="tl-details">
- <summary>The research behind this stage</summary>
- <div class="tl-research">
- <p><strong>Why this stage cannot be skipped:</strong> In McKinsey's March 2025 State of AI survey of nearly 1,500 organizations, workflow redesign showed the strongest association with reporting EBIT impact from generative AI, out of 25 attributes tested (<a href="#src-mckinsey-state">McKinsey, State of AI 2025</a>). The Foundation is the gate between guessing and knowing. Building without one means building on unmapped workflows.</p>
- </div>
- </details>
- </div>
- </li>
- <!-- Divider: Build stage -->
- <li class="tl-divider reveal"><span>The Build · Stage 4</span></li>
- <!-- Stage 4: Pilots -->
- <li class="reveal relative pl-16 md:pl-24 pb-10 md:pb-12">
- <span class="tl-node absolute left-0 top-0 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-navy text-white font-mono font-bold text-sm md:text-base">04</span>
- <div class="bg-white rounded-3xl border border-brand-border p-7 md:p-9">
- <p class="font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.25em] mb-2">Stage 4 · Build</p>
- <h3 class="text-xl md:text-2xl font-extrabold text-brand-navy tracking-tight mb-3">Pilots</h3>
- <p class="text-slate-600 leading-relaxed mb-3">One workflow at a time. Each pilot gets built, tested, and documented with a runbook. Nothing scales until the pilot proves itself.</p>
- <p class="text-slate-600 leading-relaxed mb-4"><strong class="text-brand-navy">Where I fit:</strong> I build it (done-for-you), or I scope, guide, and review while your builder does the work (guided). Each pilot ships with a runbook, tuning notes, and a 90-day watch list for your team.</p>
- <p class="inline-block font-mono text-xs font-bold uppercase tracking-[0.15em] text-brand-goldDark bg-brand-goldLight/50 rounded-full px-4 py-2">$6,500 done-for-you or $4,000 guided, fixed each.</p>
- <p class="text-sm text-slate-500 leading-relaxed mt-4">Decision gate: each pilot is approved separately. Nothing auto-continues.</p>
- <details class="tl-details">
- <summary>The research behind this stage</summary>
- <div class="tl-research">
- <p><strong>Why pilots beat big-bang:</strong> Method decides outcomes more than technology does. Pilot-first keeps each build small and testable before anything scales.</p>
- </div>
- </details>
- </div>
- </li>
- <!-- Divider: AI Expert on Staff stages -->
- <li class="tl-divider reveal"><span>AI Expert on Staff · Stages 5-6</span></li>
- <!-- Stage 5: Integrated -->
- <li class="reveal relative pl-16 md:pl-24 pb-10 md:pb-12">
- <span class="tl-node absolute left-0 top-0 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-gold text-brand-navy font-mono font-bold text-sm md:text-base">05</span>
- <div class="bg-brand-navy text-white rounded-3xl p-7 md:p-9">
- <p class="font-mono text-brand-gold text-xs font-bold uppercase tracking-[0.25em] mb-2">Stage 5 · AI Expert on Staff</p>
- <h3 class="text-xl md:text-2xl font-extrabold tracking-tight mb-3">Integrated</h3>
- <p class="text-white/75 leading-relaxed mb-3">AI stops being a set of pilots and becomes how the operation runs. Multiple workflows in production, staff who trust the systems. You know you are here when it stops feeling like a separate project.</p>
- <p class="text-white/75 leading-relaxed mb-4"><strong class="text-brand-gold">Where I fit:</strong> Continued pilot builds, wider rollout of what the pilots proved, and the AI Expert on Staff retainer: $1,000 per month, flat. The AI keeps running, issues get fixed, and every quarter I review what it is delivering. Agent readiness, when it comes, is a separate decision with separate scope.</p>
- <p class="inline-block font-mono text-xs font-bold uppercase tracking-[0.15em] text-brand-gold bg-white/10 rounded-full px-4 py-2">$1,000 per month, flat. Earned, not assumed.</p>
- <details class="tl-details tl-details-navy">
- <summary>The research behind this stage</summary>
- <div class="tl-research">
- <p><strong>Why this is a stage, not a switch:</strong> Getting here means the pilots worked, the runbooks held, and the team trusts the systems. It cannot be bought. It is earned one pilot at a time.</p>
- </div>
- </details>
- </div>
- </li>
- <!-- Stage 6: The horizon -->
- <li class="reveal relative pl-16 md:pl-24">
- <span class="tl-node node-hollow absolute left-0 top-0 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full font-mono font-bold text-sm md:text-base">06</span>
- <div class="card-ghost rounded-3xl p-7 md:p-9">
- <p class="font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.25em] mb-2">Stage 6 · AI Expert on Staff</p>
- <h3 class="text-xl md:text-2xl font-extrabold text-brand-navy tracking-tight mb-3">The horizon</h3>
- <p class="mb-3"><span class="chip chip-destination">Destination, not a product</span></p>
- <p class="text-slate-600 leading-relaxed mb-3">Autonomous AI workflows handling multi-step processes with human checkpoints. The destination the journey points toward, not a product on the menu.</p>
- <p class="text-slate-600 leading-relaxed mb-4">No agent pilots sold before their time. The partnership continues: I track where agent capabilities are actually reliable, and I will tell you straight when your operation is ready and when it is not.</p>
- <details class="tl-details">
- <summary>The research behind this stage</summary>
- <div class="tl-research">
- <p><strong>Why this is last:</strong> Reinvention means roles, workflows, and operating models redesigned around AI. Only reachable after the prior stages: most of the effort goes to people and processes, not to algorithms or technology alone. A company that buys agents at Stage 0 skips the stages that earn trust. A company that earns its way here builds on proof at each stage.</p>
- </div>
- </details>
- </div>
- </li>
- </ol>
-
- <!-- One journey, one door -->
- <div class="reveal text-center max-w-2xl mx-auto mt-14 md:mt-16">
- <p class="text-2xl md:text-3xl font-extrabold text-brand-navy tracking-tight mb-6">Everything free is free. Every paid engagement starts with the Foundation.</p>
- <p class="text-lg text-slate-600 leading-relaxed mb-6">A Stage 0 company starts with training, then books a free review, and works toward the Foundation. A company already running pilots starts with the review, and the Foundation is scoped to what they have already built. The destination is not sold on day one.</p>
- <p class="text-slate-500 leading-relaxed">The approach I recommend is staged adoption. The sequence matters more than the technology.</p>
- </div>
-
- <!-- CTA -->
- <div class="text-center max-w-2xl mx-auto mt-10 md:mt-12">
- <h3 class="reveal text-2xl md:text-3xl font-extrabold text-brand-navy tracking-tight mb-8">Where is your company on this journey?</h3>
- <a href="book.html" class="reveal inline-flex justify-center items-center bg-brand-navy hover:bg-brand-navyHover text-white font-extrabold text-sm uppercase tracking-[0.12em] px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5">Book the free AI Opportunity Review</a>
- <p class="reveal mt-5 text-slate-500 leading-relaxed">Thirty minutes. A clear read on where you stand. No pressure to buy. You receive a one-page summary within 3 business days.</p>
- </div>
-
- <!-- Sources -->
- <div class="max-w-3xl mx-auto mt-14 md:mt-16">
- <p class="reveal font-mono text-slate-400 text-[11px] font-bold uppercase tracking-[0.25em] mb-4">Sources</p>
- <ol class="sources-list reveal list-none m-0 p-0">
- <li id="src-mckinsey-state">McKinsey, State of AI 2025.</li>
- <li id="src-mckinsey-horizons">McKinsey, "From adoption to impact: Three horizons of AI transformation."</li>
- <li id="src-bcg">BCG, AI at Work 2025 and AI@Scale.</li>
- </ol>
- </div>
- </div>
-</section>
-
 <!-- ============ HOW THE WORK RUNS ============ -->
-<section class="bg-brand-section py-20 md:py-28 border-y border-brand-border">
+<section id="process" class="bg-brand-section py-20 md:py-28 border-y border-brand-border">
  <div class="max-w-7xl mx-auto px-6">
   <div class="text-center max-w-3xl mx-auto mb-16">
    <p class="reveal font-mono text-brand-goldDark text-xs font-bold uppercase tracking-[0.3em] mb-6">How the work runs</p>
    <h2 class="reveal reveal-d1 text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight">One workflow at a time.</h2>
    <p class="reveal reveal-d2 mt-5 text-lg text-slate-600">Map, then Build, then Care. No clinical work, no new platform, no whole company rebuild, no outcome promise.</p>
+   <p class="reveal reveal-d2 mt-5 text-lg text-slate-600">Every paid engagement starts with a Map. A Stage 0 company starts with a 30 minute conversation, then a Map. On the 30 minute conversation, I will give you a straight read on whether a Map fits your operation, and which workflow to measure first.</p>
   </div>
   <div class="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
    <div class="reveal bg-white rounded-2xl border border-brand-border p-7">
@@ -592,7 +390,7 @@ tailwind.config = {
    </div>
    <div class="reveal bg-white rounded-2xl border border-brand-border p-7">
     <p class="font-mono text-brand-goldDark text-xs font-bold tracking-[0.25em] mb-4">BUILD</p>
-    <h3 class="text-xl font-extrabold text-brand-navy mb-3">Build it in Microsoft 365</h3>
+    <h3 class="text-xl font-extrabold text-brand-navy mb-3">Build it inside tools they already own</h3>
     <p class="text-slate-600 leading-relaxed text-[15px]">One list, one owner, one due date, one weekly report. Accepted in live use against criteria agreed in writing before building.</p>
    </div>
    <div class="reveal bg-white rounded-2xl border border-brand-border p-7">
@@ -671,21 +469,14 @@ tailwind.config = {
  <span class="font-bold text-brand-navy text-lg">Are you trying to sell us a new software platform?</span>
  <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-brand-gold/15 text-brand-goldDark flex items-center justify-center text-xl font-bold leading-none">+</span>
  </button>
- <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">No. I don't sell software. I am an enablement and architecture consultant. I design and implement workflows using the tools and platforms your company already uses, where possible, and the Foundation maps any new licenses.</p></div>
- </div>
- <div class="reveal faq-item bg-white border border-brand-border rounded-2xl overflow-hidden">
- <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left px-7 py-6">
- <span class="font-bold text-brand-navy text-lg">What is the recorded training library?</span>
- <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-brand-gold/15 text-brand-goldDark flex items-center justify-center text-xl font-bold leading-none">+</span>
- </button>
- <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">Short recorded sessions on using AI inside the tools your team may already own: practical skills for daily work, what never goes into AI, and how to handle sensitive data. Free. Recorded sessions on using AI safely are part of the work.</p></div>
+ <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">No. I don't sell software. I am an enablement and architecture consultant. I design and implement workflows using the tools and platforms your company already uses, where possible, and the Map confirms any new licenses.</p></div>
  </div>
  <div class="reveal faq-item bg-white border border-brand-border rounded-2xl overflow-hidden">
  <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left px-7 py-6">
  <span class="font-bold text-brand-navy text-lg">Is there a guided version of the free content?</span>
  <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-brand-gold/15 text-brand-goldDark flex items-center justify-center text-xl font-bold leading-none">+</span>
  </button>
- <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">Yes. I am building a guided, step-by-step path through the free material: the videos, the worksheets, and the analysis tools, in the order your team needs them. It opens in late January 2027. Until then, book a free review to talk through where to start.</p></div>
+ <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">Yes. I am building a guided, step-by-step path through the free material: the videos, the worksheets, and the analysis tools, in the order your team needs them. Until then, book a 30 minute conversation to talk through where to start.</p></div>
  </div>
  <div class="reveal faq-item bg-white border border-brand-border rounded-2xl overflow-hidden">
  <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left px-7 py-6">
@@ -706,21 +497,21 @@ tailwind.config = {
  <span class="font-bold text-brand-navy text-lg">What if our workflows aren't ready for AI?</span>
  <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-brand-gold/15 text-brand-goldDark flex items-center justify-center text-xl font-bold leading-none">+</span>
  </button>
- <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">I will tell you on the review call. I don't force AI into brittle systems. Instead, I'll tell you straight what a sensible first step looks like, so your team builds a solid foundation first.</p></div>
+ <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">I will tell you on the conversation. I don't force AI into brittle systems. Instead, I'll tell you straight what a sensible first step looks like, so your team starts from a solid base first.</p></div>
  </div>
  <div class="reveal faq-item bg-white border border-brand-border rounded-2xl overflow-hidden">
  <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left px-7 py-6">
  <span class="font-bold text-brand-navy text-lg">What happens after the build?</span>
  <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-brand-gold/15 text-brand-goldDark flex items-center justify-center text-xl font-bold leading-none">+</span>
  </button>
- <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">You keep everything: the workflows, the SOPs, the walkthroughs. If you want ongoing support after that, the AI Expert on Staff retainer is $1,000 per month, flat: the AI keeps running, issues in delivered workflows are addressed under the retainer, and I review what it is delivering each quarter. No obligation.</p></div>
+ <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">You keep everything: the workflows, the SOPs, the walkthroughs. If you want ongoing support after that, I check it and fix it if it breaks, within scope. No obligation.</p></div>
  </div>
  <div class="reveal faq-item bg-white border border-brand-border rounded-2xl overflow-hidden">
  <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left px-7 py-6">
  <span class="font-bold text-brand-navy text-lg">Do we need to buy new licenses?</span>
  <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-brand-gold/15 text-brand-goldDark flex items-center justify-center text-xl font-bold leading-none">+</span>
  </button>
- <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">It depends on what platforms you already use. I build inside those, but the AI features themselves often need licenses you do not have yet. A different stack means different licenses and different costs. The Foundation maps what you need for your setup and what it costs, so the license picture is clear before you build.</p></div>
+ <div class="faq-answer px-7"><p class="pb-7 text-slate-600 leading-relaxed">It depends on what platforms you already use. I build inside those, but the AI features themselves often need licenses you do not have yet. A different stack means different licenses and different costs. The Map confirms what you need for your setup and what it costs, so the license picture is clear before you build.</p></div>
  </div>
  </div>
  </div>
@@ -748,10 +539,10 @@ tailwind.config = {
 <footer class="bg-brand-navyDeep text-white/50 py-12">
  <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6">
  <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs font-semibold uppercase tracking-[0.14em]">
- <a href="margin-map.html" class="hover:text-brand-gold transition-colors">Foundation</a>
+ <a href="margin-map.html" class="hover:text-brand-gold transition-colors">How it works</a>
  <a href="calculator.html" class="hover:text-brand-gold transition-colors">Calculator</a>
  <a href="checklist.html" class="hover:text-brand-gold transition-colors">Checklist</a>
- <a href="book.html" class="hover:text-brand-gold transition-colors">Book a Review</a>
+ <a href="book.html" class="hover:text-brand-gold transition-colors">Book a conversation</a>
  </div>
  <div class="flex flex-col md:flex-row items-center justify-between gap-6 w-full">
  <div class="flex items-center gap-4">
